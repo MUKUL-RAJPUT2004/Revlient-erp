@@ -1,31 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-@keyframes fadeInSlow {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-.animate-fade-in-slow {
-  animation: fadeInSlow 1.2s ease-out;
-}
-
-.ball {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: rgba(255, 111, 97, 0.6);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-body {
-  font-family: 'Poppins', system-ui, sans-serif;
-}
 
 @layer base {
   html {
@@ -33,27 +9,84 @@ body {
   }
   
   body {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Poppins', system-ui, sans-serif;
+  }
+
+  /* Ensure proper color contrast for accessibility */
+  .text-gray-600 {
+    color: #4b5563; /* WCAG AA compliant, preserved from your file */
+  }
+  
+  .dark .text-gray-400 {
+    color: #9ca3af; /* WCAG AA compliant, preserved from your file */
+  }
+  
+  .text-gray-700 {
+    color: #374151; /* WCAG AA compliant, preserved from your file */
+  }
+  
+  .dark .text-gray-300 {
+    color: #d1d5db; /* WCAG AA compliant, preserved from your file */
+  }
+
+  /* Custom color for Coral accent, preserved from your file */
+  .text-primary-600 {
+    color: #FF6F61;
+  }
+  
+  .dark .text-primary-600 {
+    color: #E55B4D;
   }
 }
 
 @layer utilities {
   .animate-fade-in {
-    animation: fadeIn 0.6s ease-out;
+    animation: fadeIn 0.6s ease-out; /* Preserved your shorter duration */
+    will-change: opacity; /* Preserved from your file */
   }
   
   .animate-slide-up {
-    animation: slideUp 0.6s ease-out;
+    animation: slideUp 0.6s ease-out; /* Preserved your shorter duration */
+    will-change: opacity, transform; /* Preserved from your file */
   }
-  
+
+  /* Additional animations from Bolt */
   .animate-float {
-    animation: float 3s ease-in-out infinite;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 3s ease-in-out infinite alternate;
+  }
+
+  /* Responsive text utilities with clamp(), preserved from your file */
+  .text-responsive-xs { font-size: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem); }
+  .text-responsive-sm { font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1rem); }
+  .text-responsive-base { font-size: clamp(1rem, 0.9rem + 0.5vw, 1.125rem); }
+  .text-responsive-lg { font-size: clamp(1.125rem, 1rem + 0.625vw, 1.25rem); }
+  .text-responsive-xl { font-size: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem); }
+  .text-responsive-2xl { font-size: clamp(1.5rem, 1.3rem + 1vw, 2rem); }
+  .text-responsive-3xl { font-size: clamp(1.875rem, 1.6rem + 1.375vw, 2.5rem); }
+  .text-responsive-4xl { font-size: clamp(2.25rem, 1.9rem + 1.75vw, 2.5rem); }
+  .text-responsive-5xl { font-size: clamp(3rem, 2.5rem + 2.5vw, 4rem); }
+  .text-responsive-6xl { font-size: clamp(3.75rem, 3rem + 3.75vw, 5rem); }
+
+  /* Glass morphism effect from Bolt */
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .dark .glass {
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
 
 @keyframes fadeIn {
   from {
-    opacity: 0;
+    opacity: 0; /* Preserved from your file */
   }
   to {
     opacity: 1;
@@ -63,7 +96,7 @@ body {
 @keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(20px); /* Preserved from your file */
   }
   to {
     opacity: 1;
@@ -71,11 +104,109 @@ body {
   }
 }
 
+/* Additional animations from Bolt */
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-15px);
   }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px rgba(255, 111, 97, 0.3); /* Adjusted to Coral */
+  }
+  to {
+    box-shadow: 0 0 40px rgba(255, 111, 97, 0.6); /* Adjusted to Coral */
+  }
+}
+
+/* Preserved your shine animation */
+@keyframes shine {
+  0% {
+    transform: scale(1) translate(-10%, -10%);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2) translate(-15%, -15%);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1) translate(-10%, -10%);
+    opacity: 0.5;
+  }
+}
+
+/* Smooth transitions for theme switching, extended from Bolt */
+* {
+  transition-property: color, background-color, border-color, box-shadow; /* Extended from your file */
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+/* Focus states for accessibility, preserved from your file */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #FF6F61; /* Updated to Coral */
+  outline-offset: 2px;
+}
+
+/* High contrast mode support, preserved from your file */
+@media (prefers-contrast: high) {
+  .text-gray-600 {
+    color: #000000;
+  }
+  
+  .dark .text-gray-400 {
+    color: #ffffff;
+  }
+}
+
+/* Custom scrollbar from Bolt */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF6F61; /* Adjusted to Coral */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E55B4D; /* Adjusted to Coral */
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #FF6F61; /* Adjusted to Coral */
+}
+
+/* Loading animation from Bolt */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.dark .shimmer {
+  background: linear-gradient(90deg, #374151 25%, #4b5563 50%, #374151 75%);
+  background-size: 200px 100%;
 }

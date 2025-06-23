@@ -1,23 +1,58 @@
-import React from 'react';
-import { ArrowRight, CheckCircle, Users, FileText, DollarSign, Clock } from 'lucide-react';
-
+import React, { useRef, useEffect } from 'react';
+import { ArrowRight, CheckCircle, Users, FileText, DollarSign, Clock, Star, TrendingUp, Zap } from 'lucide-react';
 
 const Hero = () => {
   const benefits = [
-    { icon: Users, title: 'Track Student Applications', description: 'Monitor and manage all student applications in one centralized dashboard' },
-    { icon: Clock, title: 'Automate Follow-ups', description: 'Set up automated reminders and follow-up sequences for better engagement' },
-    { icon: DollarSign, title: 'Manage Invoices Effortlessly', description: 'Generate, send, and track invoices with integrated payment processing' },
-    { icon: FileText, title: 'Streamlined Documentation', description: 'Organize and access all student documents and records instantly' }
+    { 
+      icon: Users, 
+      title: 'Track Student Applications', 
+      description: 'Monitor and manage all student applications in one centralized dashboard',
+      gradient: 'from-[#FF6F61] to-[#E55B4D]' // Coral theme
+    },
+    { 
+      icon: Clock, 
+      title: 'Automate Follow-ups', 
+      description: 'Set up automated reminders and follow-up sequences for better engagement',
+      gradient: 'from-[#FF6F61] to-[#E55B4D]' // Coral theme
+    },
+    { 
+      icon: DollarSign, 
+      title: 'Manage Invoices Effortlessly', 
+      description: 'Generate, send, and track invoices with integrated payment processing',
+      gradient: 'from-[#FF6F61] to-[#E55B4D]' // Coral theme
+    },
+    { 
+      icon: FileText, 
+      title: 'Streamlined Documentation', 
+      description: 'Organize and access all student documents and records instantly',
+      gradient: 'from-[#FF6F61] to-[#E55B4D]' // Coral theme
+    }
   ];
 
+  const stats = [
+    { number: '10K+', label: 'Active Users', icon: Users },
+    { number: '99.9%', label: 'Uptime', icon: TrendingUp },
+    { number: '24/7', label: 'Support', icon: Star },
+    { number: '50+', label: 'Countries', icon: Zap }
+  ];
 
-  
   return (
-    <section id="home" className="min-h-screen bg-[radial-gradient(circle_at_20%_20%,_#fff5e6_0%,_#ffe4cc_70%)] dark:bg-[radial-gradient(circle_at_20%_20%,_#1a202c_0%,_#2d3748_70%)] pt-16 relative">        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+    <section id="home" className="min-h-screen bg-[radial-gradient(circle_at_20%_20%,_#fff5e6_0%,_#ffe4cc_70%)] dark:bg-[radial-gradient(circle_at_20%_20%,_#1a202c_0%,_#2d3748_70%)] pt-16 relative" style={{ willChange: 'transform' }}>
+      {/* Background Decorative Elements (adapted from Bolt) */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-[#FF6F61]/10 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#E55B4D]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 relative z-10">
         {/* Hero Content */}
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-16 animate-fade-in" style={{ willChange: 'opacity' }}>
+          {/* Badge (from Bolt) */}
+          <div className="inline-flex items-center px-4 py-2 bg-[#FF6F61]/10 dark:bg-[#E55B4D]/30 rounded-full text-[#FF6F61] dark:text-[#E55B4D] text-sm font-medium mb-6 animate-slide-up">
+            <Star className="w-4 h-4 mr-2" />
+            #1 ERP Solution for Education Consultancies
+          </div>
+
           {/* Main Heading */}
-          <h1 className="text-[clamp(1.5rem,5vw,3rem)] sm:text-[clamp(2rem,6vw,4rem)] md:text-[clamp(2.5rem,7vw,6rem)] font-extrabold text-gray-800 dark:text-gray-200 mb-6 animate-slide-up leading-tight">
+          <h1 className="text-[clamp(1.5rem,5vw,3rem)] sm:text-[clamp(2rem,6vw,4rem)] md:text-[clamp(2.5rem,7vw,6rem)] font-extrabold text-gray-800 dark:text-gray-200 mb-6 animate-slide-up leading-tight" style={{ willChange: 'opacity' }}>
             Transform Your Education Business with
             <span className="block text-[clamp(2rem,6vw,4rem)] sm:text-[clamp(2.5rem,7vw,5rem)] md:text-[clamp(3rem,8vw,6rem)] text-[#FF6F61] dark:text-[#E55B4D] mt-2 font-extrabold">
               Revlient ERP
@@ -27,18 +62,33 @@ const Hero = () => {
           {/* Subtitle */}
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-4xl mx-auto animate-slide-up leading-relaxed" style={{ animationDelay: '0.2s' }}>
             The complete ERP solution designed specifically for education consultancies. 
-            Streamline operations, boost productivity, and grow your business.
+            <span className="block mt-2 font-semibold text-[#FF6F61] dark:text-[#E55B4D]">
+              Streamline operations, boost productivity, and grow your business.
+            </span>
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-slide-up" style={{ animationDelay: '0.4s' }}>
-          <button className="group bg-[#FF6F61] hover:bg-[#E55B4D] text-white px-8 py-6 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-slide-up" style={{ animationDelay: '0.4s', willChange: 'transform' }}>
+            <button className="group bg-[#FF6F61] hover:bg-[#E55B4D] text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center">
               Request a Demo
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" size={20} />
             </button>
-            <button className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-6 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+            <button className="bg-transparent border-2 border-[#FF6F61] text-[#FF6F61] dark:text-[#E55B4D] hover:bg-[#FF6F61] hover:text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
               Contact Sales
-              </button>
+            </button>
+          </div>
+
+          {/* Stats Row (from Bolt) */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16 animate-slide-up" style={{ animationDelay: '0.6s', willChange: 'transform' }}>
+            {stats.map((stat, index) => (
+              <div key={stat.label} className="text-center group">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-[#FF6F61]/10 dark:bg-[#E55B4D]/30 rounded-full mb-3 group-hover:bg-[#FF6F61] group-hover:text-white transition-all duration-300">
+                  <stat.icon size={20} />
+                </div>
+                <div className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-1">{stat.number}</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -116,16 +166,15 @@ const Hero = () => {
             </div>
           </div>
         </div>
-
-        
+       
 
         {/* Benefits Section */}
-        <div className="animate-slide-up" style={{ animationDelay: '0.8s' }}>
+        <div className="animate-slide-up" style={{ animationDelay: '1s', willChange: 'opacity, transform' }}>
           <div className="text-center mb-12">
-          <h2 className="text-[clamp(1.5rem,4vw,2rem)] sm:text-[clamp(2rem,5vw,3rem)] md:text-[clamp(2rem,6vw,4rem)] font-extrabold text-gray-800 dark:text-gray-200 mb-4">
-               Key Benefits
-              </h2>
-              <p className="text-lg sm:text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-200 mb-8 max-w-4xl mx-auto animate-slide-up leading-relaxed">
+            <h2 className="text-[clamp(1.5rem,4vw,2rem)] sm:text-[clamp(2rem,5vw,3rem)] md:text-[clamp(2rem,6vw,4rem)] font-extrabold text-gray-800 dark:text-gray-200 mb-4">
+              Key Benefits
+            </h2>
+            <p className="text-lg sm:text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-200 mb-8 max-w-4xl mx-auto animate-slide-up leading-relaxed">
               Discover how Revlient ERP can transform your education consultancy operations
             </p>
           </div>
@@ -134,23 +183,29 @@ const Hero = () => {
             {benefits.map((benefit, index) => (
               <div
                 key={benefit.title}
-                className="group bg-white dark:bg-dark-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-float border border-gray-100 dark:border-dark-700"
-                style={{ animationDelay: `${index * 0.2}s` }}
+                className="group bg-white dark:bg-dark-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-slide-up border border-gray-100 dark:border-dark-700 overflow-hidden"
+                style={{ animationDelay: `${index * 0.2}s`, willChange: 'transform' }}
               >
-                <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary-600 transition-colors duration-300">
-                  <benefit.icon className="text-primary-600 group-hover:text-white transition-colors duration-300" size={24} />
+                {/* Background Gradient (from Bolt) */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${benefit.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
+
+                {/* Icon */}
+                <div className={`relative w-12 h-12 bg-${benefit.gradient.split(' ')[0]}/10 dark:bg-${benefit.gradient.split(' ')[1]}/30 rounded-xl flex items-center justify-center mb-4 group-hover:bg-${benefit.gradient.split(' ')[0]} transition-colors duration-300 shadow-lg`}>
+                  <benefit.icon className="text-[#FF6F61] group-hover:text-white transition-colors duration-300" size={24} />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+
+                {/* Content */}
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-[#FF6F61] dark:group-hover:text-[#E55B4D] transition-colors duration-300">
                   {benefit.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                   {benefit.description}
                 </p>
+
+                {/* Hover Effect (from Bolt) */}
+                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#FF6F61] to-[#E55B4D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
               </div>
             ))}
-
-            
-            
           </div>
         </div>
       </div>
