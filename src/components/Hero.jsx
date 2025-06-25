@@ -38,14 +38,14 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen bg-[radial-gradient(circle_at_20%_20%,_#fff5e6_0%,_#ffe4cc_70%)] dark:bg-[radial-gradient(circle_at_20%_20%,_#1a202c_0%,_#2d3748_70%)] pt-16 relative" style={{ willChange: 'transform' }}>
-      {/* Background Decorative Elements (adapted from Bolt) */}
+      
       <div className="absolute top-20 left-10 w-72 h-72 bg-[#FF6F61]/10 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#E55B4D]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 relative z-10">
         {/* Hero Content */}
         <div className="text-center mb-16 animate-fade-in" style={{ willChange: 'opacity' }}>
-          {/* Badge (from Bolt) */}
+         
           <div className="inline-flex items-center px-4 py-2 bg-[#FF6F61]/10 dark:bg-[#E55B4D]/30 rounded-full text-[#FF6F61] dark:text-[#E55B4D] text-sm font-medium mb-6 animate-slide-up">
             <Star className="w-4 h-4 mr-2" />
             #1 ERP Solution for Education Consultancies
@@ -78,7 +78,7 @@ const Hero = () => {
             </button>
           </div>
 
-          {/* Stats Row (from Bolt) */}
+          {/* Stats Row */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16 animate-slide-up" style={{ animationDelay: '0.6s', willChange: 'transform' }}>
             {stats.map((stat, index) => (
               <div key={stat.label} className="text-center group">
@@ -186,7 +186,7 @@ const Hero = () => {
                 className="group bg-white dark:bg-dark-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-slide-up border border-gray-100 dark:border-dark-700 overflow-hidden"
                 style={{ animationDelay: `${index * 0.2}s`, willChange: 'transform' }}
               >
-                {/* Background Gradient (from Bolt) */}
+                {/* Background Gradient */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${benefit.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
 
                 {/* Icon */}
@@ -202,7 +202,7 @@ const Hero = () => {
                   {benefit.description}
                 </p>
 
-                {/* Hover Effect (from Bolt) */}
+                {/* Hover Effect  */}
                 <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#FF6F61] to-[#E55B4D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
               </div>
             ))}

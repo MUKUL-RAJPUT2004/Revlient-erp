@@ -13,34 +13,9 @@ import {
   BookOpen
 } from 'lucide-react';
 
-const About = () => {
-  const modules = [
-    {
-      icon: Users,
-      title: 'Student Management',
-      description: 'Complete student profiles, application tracking, and communication history in one centralized system.',
-      features: ['Profile Management', 'Application Tracking', 'Communication Log']
-    },
-    {
-      icon: FileText,
-      title: 'Document Processing',
-      description: 'Automated document collection, verification, and processing with secure cloud storage.',
-      features: ['Document Collection', 'Verification System', 'Cloud Storage']
-    },
-    {
-      icon: Calendar,
-      title: 'Appointment System',
-      description: 'Smart scheduling with automated reminders, calendar integration, and availability management.',
-      features: ['Smart Scheduling', 'Automated Reminders', 'Calendar Integration']
-    },
-    {
-      icon: DollarSign,
-      title: 'Financial Management',
-      description: 'Invoice generation, payment tracking, and comprehensive financial reporting tools.',
-      features: ['Invoice Generation', 'Payment Tracking', 'Financial Reports']
-    }
-  ];
 
+const About = () => {
+  
   const targetAudiences = [
     {
       title: 'Education Consultancies',

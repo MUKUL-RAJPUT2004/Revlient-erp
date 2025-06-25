@@ -11,6 +11,7 @@ import {
   Zap
 } from 'lucide-react';
 
+
 const CoreFeatures = () => {
   const features = [
     {
