@@ -31,7 +31,7 @@ const Customization = () => {
 
 
 return (
-    <section id="customization" className=" py-16 lg:py-24 bg-blue-900 dark:bg-dark-900 duration-300" >
+    <section id="customization" className=" py-16 lg:py-24 bg-white dark:bg-dark-900 duration-300" >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16 animate-fade-in">
                 <h2 className="text-[clamp(1.5rem,4vw,2rem)] sm:text-[clamp(2rem,5vw,3rem)] md:text-[clamp(2rem,6vw,4rem)] font-extrabold text-gray-800 dark:text-gray-200 mb-4">
