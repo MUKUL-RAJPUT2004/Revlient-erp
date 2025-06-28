@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import CoreFeatures from './components/CoreFeatures';
 import About from './components/About';
 import Customization from './components/Customization';
+import WhyChooseUs from './components/WhyChooseUs';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <About />
         <CoreFeatures />
         <Customization />
+        <WhyChooseUs />
 
 
         <div className="fixed bottom-6 right-6 p-4 bg-primary-600 text-white rounded-full cursor-pointer hover:bg-primary-700 transition-colors">
