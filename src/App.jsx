@@ -5,6 +5,8 @@ import CoreFeatures from './components/CoreFeatures';
 import About from './components/About';
 import Customization from './components/Customization';
 import WhyChooseUs from './components/WhyChooseUs';
+import CaseStudies from './components/CaseStudy';
+import Testimonials from './components/Testimonial';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <CoreFeatures />
         <Customization />
         <WhyChooseUs />
+        <Testimonials />
+        <CaseStudies />
 
 
         <div className="fixed bottom-6 right-6 p-4 bg-primary-600 text-white rounded-full cursor-pointer hover:bg-primary-700 transition-colors">

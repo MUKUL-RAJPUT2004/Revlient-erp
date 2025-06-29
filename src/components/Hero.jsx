@@ -73,7 +73,7 @@ const Hero = () => {
               Request a Demo
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" size={20} />
             </button>
-            <button className="bg-transparent border-2 border-[#FF6F61] text-[#FF6F61] dark:text-[#E55B4D] hover:bg-[#FF6F61] hover:text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+            <button className="bg-transparent border-2 border-[#FF6F61] text-[#FF6F61] dark:text-[#E55B4D] hover:bg-[#FF6F61] hover:dark:text-white hover:text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
               Contact Sales
             </button>
           </div>

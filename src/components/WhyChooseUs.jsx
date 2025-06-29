@@ -29,7 +29,7 @@ const WhyChooseUs = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-[clamp(1.5rem,4vw,2rem)] sm:text-[clamp(2rem,5vw,3rem)] md:text-[clamp(2rem,6vw,4rem)] font-extrabold text-gray-800 dark:text-gray-200">
-            Why choose us
+            Why choose us?
           </h2>
         </div>
 
