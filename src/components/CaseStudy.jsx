@@ -78,7 +78,7 @@ const CaseStudies = () => {
                   <div className="space-y-2">
                     {study.results.map((result, idx) => (
                       <div key={idx} className="flex items-center">
-                        <div className="w-2 h-2 bg-primary-600 rounded-full mr-3"></div>
+                        <div className="w-2 h-2 bg-[#FF6F61] rounded-full mr-3"></div>
                         <span className="text-gray-600 dark:text-gray-300 text-responsive-sm">
                           {result}
                         </span>

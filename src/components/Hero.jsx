@@ -1,5 +1,5 @@
-import React, { useRef, useEffect } from 'react';
-import { ArrowRight, CheckCircle, Users, FileText, DollarSign, Clock, Star, TrendingUp, Zap } from 'lucide-react';
+import { ArrowRight, Users, FileText, DollarSign, Clock, Star, TrendingUp, Zap } from 'lucide-react';
+import React from 'react';
 
 const Hero = () => {
   const benefits = [

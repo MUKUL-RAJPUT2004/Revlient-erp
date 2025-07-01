@@ -1,16 +1,9 @@
 import React from 'react';
 import { 
   Users, 
-  FileText, 
-  Calendar, 
-  DollarSign,
   Target,
   Award,
-  TrendingUp,
-  Building2,
-  GraduationCap,
-  Briefcase,
-  BookOpen
+  TrendingUp
 } from 'lucide-react';
 
 
@@ -56,28 +49,28 @@ const About = () => {
             <div className="animate-slide-up">
               <div className="space-y-6">
                 <p className="text-responsive-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                  Revlient ERP is a comprehensive Enterprise Resource Planning system specifically designed for education consultancies, immigration firms, and career counseling services.
+                  Revlient ERP is built just for education consultancies, immigration firms, and career counselors—so you get tools that actually fit your business, not just another generic CRM.
                 </p>
                 
                 <div className="space-y-4">
                   <div className="flex items-start space-x-4">
-                    <div className="w-2 h-2 bg-primary-600 rounded-full mt-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-[#FF6F61] rounded-full mt-3 flex-shrink-0"></div>
                     <p className="text-responsive-base text-gray-600 dark:text-gray-400">
-                      <strong className="text-gray-900 dark:text-white">Complete Business Management:</strong> Unlike generic CRM systems, Revlient ERP understands the unique challenges of education consultancies.
+                      <strong className="text-gray-900 dark:text-white">Complete Business Management:</strong> We know your challenges—so we built features that make your day easier, not harder.
                     </p>
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <div className="w-2 h-2 bg-primary-600 rounded-full mt-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-[#FF6F61] rounded-full mt-3 flex-shrink-0"></div>
                     <p className="text-responsive-base text-gray-600 dark:text-gray-400">
-                      <strong className="text-gray-900 dark:text-white">Cloud-Based & Secure:</strong> Access your data anywhere, anytime with enterprise-grade security and regular backups.
+                      <strong className="text-gray-900 dark:text-white">Cloud-Based & Secure:</strong> Access your data anywhere, anytime, with peace of mind—your info is always safe and backed up.
                     </p>
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <div className="w-2 h-2 bg-primary-600 rounded-full mt-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-[#FF6F61] rounded-full mt-3 flex-shrink-0"></div>
                     <p className="text-responsive-base text-gray-600 dark:text-gray-400">
-                      <strong className="text-gray-900 dark:text-white">Industry-Specific:</strong> Tailored solutions for student management, application tracking, and business growth.
+                      <strong className="text-gray-900 dark:text-white">Industry-Specific:</strong> From student management to application tracking, every tool is tailored for your workflow.
                     </p>
                   </div>
                 </div>
@@ -92,7 +85,7 @@ const About = () => {
                   alt="Education consultancy team working with ERP system"
                   className="w-full h-80 object-cover rounded-2xl shadow-xl"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/20 to-transparent rounded-2xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#FF6F61]/20 to-transparent rounded-2xl"></div>
               </div>
             </div>
           </div>
@@ -111,8 +104,8 @@ const About = () => {
                 key={stat.label}
                 className="bg-gray-50 dark:bg-dark-800 p-6 rounded-2xl text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 dark:border-dark-700"
               >
-                <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="text-primary-600 dark:text-primary-600" size={24} />
+                <div className="w-12 h-12 bg-[#FF6F61]/10 dark:bg-[#E55B4D]/30 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="text-[#FF6F61]" size={24} />
                 </div>
                 <div className="text-responsive-3xl font-bold text-gray-900 dark:text-white mb-2">
                   {stat.number}
@@ -155,7 +148,7 @@ const About = () => {
             <div className="space-y-6">
               {targetAudiences.map((audience, index) => (
                 <div key={audience.title} className="flex items-start space-x-4">
-                  <div className="w-3 h-3 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-3 h-3 bg-[#FF6F61] rounded-full mt-2 flex-shrink-0"></div>
                   <div>
                     <h4 className="text-responsive-lg font-semibold text-gray-900 dark:text-white mb-2">
                       {audience.title}

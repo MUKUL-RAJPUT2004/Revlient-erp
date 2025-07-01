@@ -12,24 +12,24 @@
     font-family: 'Poppins', system-ui, sans-serif;
   }
 
-  /* Ensure proper color contrast for accessibility */
+  
   .text-gray-600 {
-    color: #4b5563; /* WCAG AA compliant, preserved from your file */
+    color: #4b5563;
   }
   
   .dark .text-gray-400 {
-    color: #9ca3af; /* WCAG AA compliant, preserved from your file */
+    color: #9ca3af; 
   }
   
   .text-gray-700 {
-    color: #374151; /* WCAG AA compliant, preserved from your file */
+    color: #374151; 
   }
   
   .dark .text-gray-300 {
-    color: #d1d5db; /* WCAG AA compliant, preserved from your file */
+    color: #d1d5db; 
   }
 
-  /* Custom color for Coral accent, preserved from your file */
+  
   .text-primary-600 {
     color: #FF6F61;
   }
@@ -41,16 +41,15 @@
 
 @layer utilities {
   .animate-fade-in {
-    animation: fadeIn 0.6s ease-out; /* Preserved your shorter duration */
-    will-change: opacity; /* Preserved from your file */
+    animation: fadeIn 0.6s ease-out; 
+    will-change: opacity; 
   }
   
   .animate-slide-up {
-    animation: slideUp 0.6s ease-out; /* Preserved your shorter duration */
-    will-change: opacity, transform; /* Preserved from your file */
+    animation: slideUp 0.6s ease-out; 
+    will-change: opacity, transform; 
   }
 
-  /* Additional animations from Bolt */
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
@@ -59,7 +58,6 @@
     animation: glow 3s ease-in-out infinite alternate;
   }
 
-  /* Responsive text utilities with clamp(), preserved from your file */
   .text-responsive-xs { font-size: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem); }
   .text-responsive-sm { font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1rem); }
   .text-responsive-base { font-size: clamp(1rem, 0.9rem + 0.5vw, 1.125rem); }
@@ -71,7 +69,6 @@
   .text-responsive-5xl { font-size: clamp(3rem, 2.5rem + 2.5vw, 4rem); }
   .text-responsive-6xl { font-size: clamp(3.75rem, 3rem + 3.75vw, 5rem); }
 
-  /* Glass morphism effect from Bolt */
   .glass {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -86,7 +83,7 @@
 
 @keyframes fadeIn {
   from {
-    opacity: 0; /* Preserved from your file */
+    opacity: 0; 
   }
   to {
     opacity: 1;
@@ -96,7 +93,7 @@
 @keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(20px); /* Preserved from your file */
+    transform: translateY(20px); 
   }
   to {
     opacity: 1;
@@ -116,14 +113,13 @@
 
 @keyframes glow {
   from {
-    box-shadow: 0 0 20px rgba(255, 111, 97, 0.3); /* Adjusted to Coral */
+    box-shadow: 0 0 20px rgba(255, 111, 97, 0.3); 
   }
   to {
-    box-shadow: 0 0 40px rgba(255, 111, 97, 0.6); /* Adjusted to Coral */
+    box-shadow: 0 0 40px rgba(255, 111, 97, 0.6);
   }
 }
 
-/* Preserved your shine animation */
 @keyframes shine {
   0% {
     transform: scale(1) translate(-10%, -10%);
@@ -139,21 +135,18 @@
   }
 }
 
-/* Smooth transitions for theme switching, extended from Bolt */
 * {
   transition-property: color, background-color, border-color, box-shadow; /* Extended from your file */
   transition-duration: 300ms;
   transition-timing-function: ease-in-out;
 }
 
-/* Focus states for accessibility, preserved from your file */
 button:focus-visible,
 a:focus-visible {
-  outline: 2px solid #FF6F61; /* Updated to Coral */
+  outline: 2px solid #FF6F61; 
   outline-offset: 2px;
 }
 
-/* High contrast mode support, preserved from your file */
 @media (prefers-contrast: high) {
   .text-gray-600 {
     color: #000000;
@@ -164,7 +157,6 @@ a:focus-visible {
   }
 }
 
-/* Custom scrollbar from Bolt */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -174,12 +166,12 @@ a:focus-visible {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #FF6F61; /* Adjusted to Coral */
+  background: #FF6F61; 
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #E55B4D; /* Adjusted to Coral */
+  background: #E55B4D; 
 }
 
 .dark ::-webkit-scrollbar-track {
@@ -187,10 +179,9 @@ a:focus-visible {
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  background: #FF6F61; /* Adjusted to Coral */
+  background: #FF6F61;
 }
 
-/* Loading animation from Bolt */
 @keyframes shimmer {
   0% {
     background-position: -200px 0;

@@ -127,19 +127,16 @@ const Customization = () => (
         ))}
       </div>
       {/* Call to Action */}
-      <div className="mt-24 text-center bg-gradient-to-r from-primary-600 via-purple-500 to-blue-500 rounded-3xl p-12 shadow-2xl relative overflow-hidden">
-    
-        <div className="absolute -top-20 -left-20 w-96 h-96 bg-white/10 rounded-full blur-2xl pointer-events-none z-0" />
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-white/10 rounded-full blur-2xl pointer-events-none z-0" />
+      <div className="mt-24 text-center bg-gradient-to-r from-[#FFF5E6] to-[#FFE4CC] dark:from-[#2d3748] dark:to-[#1a202c] rounded-2xl p-12 border border-[#FF6F61]/30 dark:border-[#E55B4D]/30 shadow-2xl relative overflow-hidden">
         <div className="relative z-10">
-          <Heart className="w-16 h-16 text-white mx-auto mb-6 animate-pulse" />
-          <h3 className="text-[clamp(1.5rem,3vw,2.5rem)] font-extrabold text-white mb-4 drop-shadow-lg">
+          <Heart className="w-16 h-16 text-[#FF6F61] dark:text-[#E55B4D] mx-auto mb-6 animate-pulse" />
+          <h3 className="text-[clamp(1.5rem,3vw,2.5rem)] font-extrabold text-gray-900 dark:text-white mb-4 drop-shadow-lg">
             Ready to Start Your Customization Journey?
           </h3>
-          <p className="text-white/90 mb-8 text-lg md:text-xl max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 mb-8 text-lg md:text-xl max-w-2xl mx-auto">
             Let's work together to create an ERP system that perfectly fits your consultancy's unique needs and brings joy to your daily operations.
           </p>
-          <button className="bg-white text-primary-600 px-10 py-4 rounded-2xl font-bold text-lg md:text-xl hover:bg-gray-50 transition-all duration-300 hover:scale-105 shadow-lg">
+          <button className="bg-[#FF6F61] hover:bg-[#E55B4D] text-white px-10 py-4 rounded-xl font-bold text-lg md:text-xl transition-all duration-300 hover:scale-105 shadow-lg">
             Begin Your Custom ERP Journey ✨
           </button>
         </div>

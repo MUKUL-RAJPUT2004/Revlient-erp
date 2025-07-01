@@ -56,7 +56,7 @@ const Testimonials = () => {
       <Star
         key={index}
         className={`w-5 h-5 ${
-          index < rating ? 'text-primary-600 fill-current' : 'text-gray-300 dark:text-gray-600'
+          index < rating ? 'text-[#FF6F61] fill-current' : 'text-gray-300 dark:text-gray-600'
         }`}
       />
     ));
@@ -102,7 +102,7 @@ const Testimonials = () => {
                   <p className="text-gray-600 dark:text-gray-300 text-responsive-base">
                     {testimonials[currentTestimonial].role}
                   </p>
-                  <p className="text-primary-600 dark:text-primary-400 font-medium text-responsive-base">
+                  <p className="text-[#FF6F61] dark:text-[#E55B4D] font-medium text-responsive-base">
                     {testimonials[currentTestimonial].company}
                   </p>
                 </div>
@@ -178,7 +178,7 @@ const Testimonials = () => {
                 onClick={() => setCurrentTestimonial(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentTestimonial 
-                    ? 'bg-primary-600 scale-125' 
+                    ? 'bg-[#FF6F61] scale-125' 
                     : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'
                 }`}
               />
