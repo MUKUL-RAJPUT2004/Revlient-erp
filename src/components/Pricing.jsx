@@ -197,16 +197,26 @@ const Pricing = () => {
                 </div>
 
                 {/* CTA Button */}
-                <button
-                  className={`w-full py-4 px-6 rounded-xl font-semibold text-responsive-base transition-all duration-300 transform hover:scale-105 flex items-center justify-center group ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-[#FF6F61] to-[#E55B4D] hover:from-[#E55B4D] hover:to-[#FF6F61] text-white shadow-lg hover:shadow-xl'
-                      : 'bg-gray-100 dark:bg-dark-700 hover:bg-gray-200 dark:hover:bg-dark-600 text-gray-900 dark:text-white border border-gray-300 dark:border-dark-600'
-                  }`}
-                >
-                  {plan.cta}
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                </button>
+                {plan.cta === 'Contact Us for Enterprise' ? (
+                  <a
+                    href="#contact"
+                    className={`w-full py-4 px-6 rounded-xl font-semibold text-responsive-base transition-all duration-300 transform hover:scale-105 flex items-center justify-center group bg-gradient-to-r from-[#FF6F61] to-[#E55B4D] hover:from-[#E55B4D] hover:to-[#FF6F61] text-white shadow-lg hover:shadow-xl`}
+                  >
+                    {plan.cta}
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  </a>
+                ) : (
+                  <button
+                    className={`w-full py-4 px-6 rounded-xl font-semibold text-responsive-base transition-all duration-300 transform hover:scale-105 flex items-center justify-center group ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-[#FF6F61] to-[#E55B4D] hover:from-[#E55B4D] hover:to-[#FF6F61] text-white shadow-lg hover:shadow-xl'
+                        : 'bg-gray-100 dark:bg-dark-700 hover:bg-gray-200 dark:hover:bg-dark-600 text-gray-900 dark:text-white border border-gray-300 dark:border-dark-600'
+                    }`}
+                  >
+                    {plan.cta}
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  </button>
+                )}
               </div>
             </div>
           ))}

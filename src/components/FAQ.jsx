@@ -116,9 +116,9 @@ const FAQ = () => {
               Our team is here to help you understand how Revlient ERP can transform your education consultancy operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-[#FF6F61] hover:bg-[#E55B4D] text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+              <a href="#contact" className="bg-[#FF6F61] hover:bg-[#E55B4D] text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center">
                 Contact Support
-              </button>
+              </a>
               <button className="bg-white dark:bg-dark-800 border border-[#FF6F61] text-[#FF6F61] dark:text-[#E55B4D] hover:bg-[#FF6F61] hover:text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105">
                 Schedule a Demo
               </button>
