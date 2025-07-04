@@ -28,25 +28,26 @@ const architectureLayers = [
   {
     name: 'User Interface Layer',
     icon: Smartphone,
-    color: 'from-violet-400 to-purple-500',
-    components: ['Web Dashboard', 'Mobile App', 'Custom Themes', 'Responsive Design']
+    color: 'from-accent-100 to-primary-600',
+    components: ['Web Dashboard', 'Mobile App', 'Custom Themes', 'Responsive Design'],
+    extraClass: 'border border-primary-200/40 shadow-xl'
   },
   {
     name: 'Business Logic Layer',
     icon: Workflow,
-    color: 'from-emerald-400 to-teal-500',
+    color: 'from-accent-200 to-primary-600',
     components: ['Custom Workflows', 'Business Rules', 'Automation Engine', 'Process Templates']
   },
   {
     name: 'Integration Layer',
     icon: Globe,
-    color: 'from-blue-400 to-indigo-500',
+    color: 'from-primary-600 to-primary-700',
     components: ['API Gateway', 'Third-party Connectors', 'Data Sync', 'Webhook Management']
   },
   {
     name: 'Data Layer',
     icon: Database,
-    color: 'from-slate-400 to-gray-500',
+    color: 'from-primary-700 to-[#B23A2B]',
     components: ['Secure Database', 'Data Backup', 'Analytics Store', 'Performance Cache']
   }
 ];
@@ -101,7 +102,7 @@ const Customization = () => (
       <div className="mx-auto max-w-4xl space-y-10">
         {architectureLayers.map((layer, index) => (
           <div key={index} className="relative animate-fade-in" style={{ animationDelay: `${0.4 + index * 0.15}s` }}>
-            <div className={`bg-gradient-to-r ${layer.color} rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-[1.02]`}>
+            <div className={`bg-gradient-to-r ${layer.color} rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-[1.02] ${layer.extraClass || ''}`}>
               <div className="flex items-center mb-6">
                 <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mr-6">
                   <layer.icon className="w-8 h-8 text-white" />

@@ -16,7 +16,7 @@ const Pricing = () => {
       name: 'Starter',
       description: 'Get started with all the essentials for small consultancies.',
       icon: Users,
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-accent-100 to-primary-600',
       popular: false,
       pricing: {
         monthly: 49,
@@ -37,7 +37,7 @@ const Pricing = () => {
       name: 'Professional',
       description: 'Our most popular plan—perfect for growing teams who want more power and flexibility.',
       icon: Building2,
-      color: 'from-[#FF6F61] to-[#E55B4D]',
+      color: 'from-primary-600 to-primary-700',
       popular: true,
       pricing: {
         monthly: 99,
@@ -59,7 +59,7 @@ const Pricing = () => {
       name: 'Enterprise',
       description: 'For large organizations—unlimited features, storage, and support. Let\'s build your custom solution together.',
       icon: Rocket,
-      color: 'from-purple-600 to-purple-700',
+      color: 'from-accent-200 to-primary-600',
       popular: false,
       pricing: {
         monthly: 'Custom',
@@ -80,7 +80,7 @@ const Pricing = () => {
   ];
 
   return (
-    <section id="pricing" className="py-16 lg:py-24 bg-gray-50 dark:bg-dark-800 transition-colors duration-300">
+    <section id="pricing" className="py-16 lg:py-24 bg-gray-50 dark:bg-dark-800 transition-colors duration-300 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -93,12 +93,12 @@ const Pricing = () => {
           </p>
 
           {/* Billing Toggle */}
-          <div className="inline-flex items-center bg-white dark:bg-dark-700 rounded-full p-1 shadow-lg animate-slide-up" style={{ animationDelay: '0.2s' }}>
+          <div className="inline-flex items-center bg-white dark:bg-dark-700 rounded-full p-1 shadow-lg animate-slide-up mb-8" style={{ animationDelay: '0.2s' }}>
             <button
               onClick={() => setBillingCycle('monthly')}
               className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 billingCycle === 'monthly'
-                  ? 'bg-[#FF6F61] text-white shadow-sm'
+                  ? 'bg-primary-600 text-white shadow-sm'
                   : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
               }`}
             >
@@ -108,7 +108,7 @@ const Pricing = () => {
               onClick={() => setBillingCycle('yearly')}
               className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 relative ${
                 billingCycle === 'yearly'
-                  ? 'bg-[#FF6F61] text-white shadow-sm'
+                  ? 'bg-primary-600 text-white shadow-sm'
                   : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
               }`}
             >
@@ -125,15 +125,15 @@ const Pricing = () => {
           {plans.map((plan, index) => (
             <div
               key={plan.name}
-              className={`relative bg-white dark:bg-[#2d3748] rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-slide-up border border-[#FF6F61]/20 dark:border-[#E55B4D]/20 overflow-hidden ${
-                plan.popular ? 'lg:-mt-12 ring-4 ring-[#FF6F61]/20 lg:scale-110' : ''
+              className={`relative bg-white dark:bg-dark-800 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-slide-up border border-primary-600/20 dark:border-primary-700/20 overflow-hidden ${
+                plan.popular ? 'lg:-mt-12 ring-4 ring-primary-600/20 lg:scale-110' : ''
               }`}
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Popular Badge */}
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-20">
-                  <div className="bg-gradient-to-r from-[#FF6F61] to-[#E55B4D] text-white px-8 py-3 rounded-full text-sm font-bold flex items-center shadow-2xl border-4 border-white dark:border-[#1a202c]">
+                  <div className="bg-gradient-to-r from-primary-600 to-primary-700 text-white px-8 py-3 rounded-full text-sm font-bold flex items-center shadow-2xl border-4 border-white dark:border-dark-900">
                     <Star className="w-4 h-4 mr-2 fill-current" />
                     MOST POPULAR
                   </div>
@@ -200,17 +200,15 @@ const Pricing = () => {
                 {plan.cta === 'Contact Us for Enterprise' ? (
                   <a
                     href="#contact"
-                    className={`w-full py-4 px-6 rounded-xl font-semibold text-responsive-base transition-all duration-300 transform hover:scale-105 flex items-center justify-center group bg-gradient-to-r from-[#FF6F61] to-[#E55B4D] hover:from-[#E55B4D] hover:to-[#FF6F61] text-white shadow-lg hover:shadow-xl`}
+                    className={`w-full py-4 px-6 rounded-xl font-semibold text-responsive-base transition-all duration-300 transform hover:scale-105 flex items-center justify-center group bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-600 text-white shadow-lg hover:shadow-xl`}
                   >
                     {plan.cta}
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </a>
                 ) : (
                   <button
-                    className={`w-full py-4 px-6 rounded-xl font-semibold text-responsive-base transition-all duration-300 transform hover:scale-105 flex items-center justify-center group ${
-                      plan.popular
-                        ? 'bg-gradient-to-r from-[#FF6F61] to-[#E55B4D] hover:from-[#E55B4D] hover:to-[#FF6F61] text-white shadow-lg hover:shadow-xl'
-                        : 'bg-gray-100 dark:bg-dark-700 hover:bg-gray-200 dark:hover:bg-dark-600 text-gray-900 dark:text-white border border-gray-300 dark:border-dark-600'
+                    className={`w-full py-4 px-6 rounded-xl font-semibold text-responsive-base transition-all duration-300 transform hover:scale-105 flex items-center justify-center group 
+                      bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-600 text-white shadow-lg hover:shadow-xl'
                     }`}
                   >
                     {plan.cta}
