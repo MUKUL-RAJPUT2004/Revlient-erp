@@ -99,10 +99,10 @@ const Testimonials = () => {
                   <h4 className="font-bold text-gray-800 dark:text-white text-responsive-lg">
                     {testimonials[currentTestimonial].name}
                   </h4>
-                  <p className="text-gray-600 dark:text-gray-300 text-responsive-base">
+                  <p className="text-gray-600 dark:text-gray-300 text-responsive-base font-normal">
                     {testimonials[currentTestimonial].role}
                   </p>
-                  <p className="text-[#FF6F61] dark:text-[#E55B4D] font-medium text-responsive-base">
+                  <p className="text-[#FF6F61] dark:text-[#E55B4D] font-normal text-responsive-base">
                     {testimonials[currentTestimonial].company}
                   </p>
                 </div>
@@ -114,7 +114,7 @@ const Testimonials = () => {
               
               <div className="relative">
                 <Quote className="w-8 h-8 text-gray-300 dark:text-gray-600 absolute -top-2 -left-2" />
-                <p className="text-gray-700 dark:text-gray-300 text-responsive-base leading-relaxed pl-6">
+                <p className="text-gray-700 dark:text-gray-300 text-responsive-base font-normal leading-relaxed pl-6">
                   {testimonials[currentTestimonial].content}
                 </p>
               </div>
@@ -132,13 +132,13 @@ const Testimonials = () => {
                   <h4 className="font-bold text-gray-800 dark:text-white text-responsive-base">
                     {testimonials[(currentTestimonial + 1) % testimonials.length].name}
                   </h4>
-                  <p className="text-gray-600 dark:text-gray-300 text-responsive-sm">
+                  <p className="text-gray-600 dark:text-gray-300 text-responsive-sm font-normal">
                     {testimonials[(currentTestimonial + 1) % testimonials.length].company}
                   </p>
                 </div>
               </div>
               
-              <p className="text-gray-600 dark:text-gray-300 text-responsive-sm leading-relaxed line-clamp-4">
+              <p className="text-gray-600 dark:text-gray-300 text-responsive-sm font-normal leading-relaxed line-clamp-4">
                 {testimonials[(currentTestimonial + 1) % testimonials.length].content}
               </p>
             </div>

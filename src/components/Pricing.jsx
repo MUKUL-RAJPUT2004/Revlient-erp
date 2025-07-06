@@ -159,7 +159,7 @@ const Pricing = () => {
                   {typeof plan.pricing[billingCycle] === 'number' ? (
                     <>
                       <div className="flex items-baseline justify-center">
-                        <span className="text-responsive-4xl font-bold text-gray-900 dark:text-white">
+                        <span className="text-responsive-4xl font-bold text-gray-900 dark:text-white font-normal">
                           ${plan.pricing[billingCycle]}
                         </span>
                         <span className="text-responsive-lg text-gray-600 dark:text-gray-400 ml-2">
@@ -178,7 +178,7 @@ const Pricing = () => {
                       )}
                     </>
                   ) : (
-                    <div className="text-responsive-3xl font-bold text-gray-900 dark:text-white">
+                    <div className="text-responsive-3xl font-bold text-gray-900 dark:text-white font-normal">
                       {plan.pricing[billingCycle]}
                     </div>
                   )}

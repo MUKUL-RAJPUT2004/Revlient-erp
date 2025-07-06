@@ -46,7 +46,7 @@ const Hero = () => {
         {/* Hero Content */}
         <div className="text-center mb-16 animate-fade-in" style={{ willChange: 'opacity' }}>
          
-          <div className="inline-flex items-center px-4 py-2 bg-[#FF6F61]/10 dark:bg-[#E55B4D]/30 rounded-full text-[#FF6F61] dark:text-[#E55B4D] text-sm font-medium mb-6 animate-slide-up">
+          <div className="inline-flex items-center px-4 py-2 bg-[#FF6F61]/10 dark:bg-[#E55B4D]/30 rounded-full text-[#FF6F61] dark:text-[#E55B4D] text-sm font-normal mb-6 animate-slide-up">
             <Star className="w-4 h-4 mr-2" />
             #1 ERP Solution for Education Consultancies
           </div>
@@ -60,9 +60,9 @@ const Hero = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-4xl mx-auto animate-slide-up leading-relaxed" style={{ animationDelay: '0.2s' }}>
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-normal mb-8 max-w-4xl mx-auto animate-slide-up leading-relaxed" style={{ animationDelay: '0.2s' }}>
             The complete ERP solution designed specifically for education consultancies. 
-            <span className="block mt-2 font-semibold text-[#FF6F61] dark:text-[#E55B4D]">
+            <span className="block mt-2 font-normal text-[#FF6F61] dark:text-[#E55B4D]">
               Streamline operations, boost productivity, and grow your business.
             </span>
           </p>
@@ -86,7 +86,7 @@ const Hero = () => {
                   <stat.icon size={20} />
                 </div>
                 <div className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-1">{stat.number}</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">{stat.label}</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400 font-normal">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -116,7 +116,7 @@ const Hero = () => {
                 <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-4 rounded-xl text-white">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-blue-100 text-sm">Total Applications</p>
+                      <p className="text-blue-100 text-sm font-normal">Total Applications</p>
                       <p className="text-2xl font-bold">1,247</p>
                     </div>
                     <Users className="text-blue-200" size={32} />
@@ -125,7 +125,7 @@ const Hero = () => {
                 <div className="bg-gradient-to-r from-green-500 to-green-600 p-4 rounded-xl text-white">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-green-100 text-sm">Revenue This Month</p>
+                      <p className="text-green-100 text-sm font-normal">Revenue This Month</p>
                       <p className="text-2xl font-bold">$24,580</p>
                     </div>
                     <DollarSign className="text-green-200" size={32} />
@@ -134,7 +134,7 @@ const Hero = () => {
                 <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-4 rounded-xl text-white">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-purple-100 text-sm">Pending Follow-ups</p>
+                      <p className="text-purple-100 text-sm font-normal">Pending Follow-ups</p>
                       <p className="text-2xl font-bold">23</p>
                     </div>
                     <Clock className="text-purple-200" size={32} />

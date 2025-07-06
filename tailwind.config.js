@@ -38,7 +38,7 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Poppins', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'responsive-xs': 'clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem)',
