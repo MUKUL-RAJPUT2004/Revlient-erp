@@ -9,10 +9,8 @@ export const useTheme = () => {
       if (savedTheme) {
         return savedTheme;
       }
-      // Then check system preference
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        return 'dark';
-      }
+      // Default to light theme (as per requirements)
+      return 'light';
     }
     return 'light';
   });

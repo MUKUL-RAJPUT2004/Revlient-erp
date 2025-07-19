@@ -1,14 +1,46 @@
 import React from 'react';
 import { 
   Users, 
+  FileText, 
+  Calendar, 
+  DollarSign,
   Target,
   Award,
-  TrendingUp
+  TrendingUp,
+  Building2,
+  GraduationCap,
+  Briefcase,
+  BookOpen
 } from 'lucide-react';
 
-
 const About = () => {
-  
+  const modules = [
+    {
+      icon: Users,
+      title: 'Student Management',
+      description: 'Complete student profiles, application tracking, and communication history in one centralized system.',
+      features: ['Profile Management', 'Application Tracking', 'Communication Log']
+    },
+    {
+      icon: FileText,
+      title: 'Document Processing',
+      description: 'Automated document collection, verification, and processing with secure cloud storage.',
+      features: ['Document Collection', 'Verification System', 'Cloud Storage']
+    },
+    {
+      icon: Calendar,
+      title: 'Appointment System',
+      description: 'Smart scheduling with automated reminders, calendar integration, and availability management.',
+      features: ['Smart Scheduling', 'Automated Reminders', 'Calendar Integration']
+    },
+    {
+      icon: DollarSign,
+      title: 'Financial Management',
+      description: 'Invoice generation, payment tracking, and comprehensive financial reporting tools.',
+      features: ['Invoice Generation', 'Payment Tracking', 'Financial Reports']
+    }
+  ];
+
   const targetAudiences = [
     {
       title: 'Education Consultancies',
@@ -33,44 +65,44 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-16 lg:py-24 bg-white dark:bg-dark-900 transition-colors duration-300">
+    <section id="about" className="py-16 lg:py-24 bg-warmwind-card transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* What is Revlient ERP Section */}
-        <div className="mb-20 animate-fade-in">
+        <div className="mb-20 scroll-reveal">
           <div className="text-center mb-12">
-            <h2 className="text-[clamp(1.5rem,4vw,2rem)] sm:text-[clamp(2rem,5vw,3rem)] md:text-[clamp(2rem,6vw,4rem)] font-extrabold text-gray-800 dark:text-gray-200 mb-4">
+            <h2 className="text-responsive-4xl font-bold text-warmwind mb-6">
               What is Revlient ERP?
             </h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Content - Left Side */}
-            <div className="animate-slide-up">
+            <div className="scroll-reveal">
               <div className="space-y-6">
-                <p className="text-responsive-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                  Revlient ERP is built just for education consultancies, immigration firms, and career counselors—so you get tools that actually fit your business, not just another generic CRM.
+                <p className="text-responsive-lg text-warmwind-light leading-relaxed mb-6">
+                  Revlient ERP is a comprehensive Enterprise Resource Planning system specifically designed for education consultancies, immigration firms, and career counseling services.
                 </p>
                 
                 <div className="space-y-4">
                   <div className="flex items-start space-x-4">
-                    <div className="w-2 h-2 bg-[#FF6F61] rounded-full mt-3 flex-shrink-0"></div>
-                    <p className="text-responsive-base text-gray-600 dark:text-gray-400">
-                      <strong className="text-gray-900 dark:text-white">Complete Business Management:</strong> We know your challenges—so we built features that make your day easier, not harder.
+                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 flex-shrink-0"></div>
+                    <p className="text-responsive-base text-warmwind-light">
+                      <strong className="text-warmwind">Complete Business Management:</strong> Unlike generic CRM systems, Revlient ERP understands the unique challenges of education consultancies.
                     </p>
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <div className="w-2 h-2 bg-[#FF6F61] rounded-full mt-3 flex-shrink-0"></div>
-                    <p className="text-responsive-base text-gray-600 dark:text-gray-400">
-                      <strong className="text-gray-900 dark:text-white">Cloud-Based & Secure:</strong> Access your data anywhere, anytime, with peace of mind—your info is always safe and backed up.
+                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 flex-shrink-0"></div>
+                    <p className="text-responsive-base text-warmwind-light">
+                      <strong className="text-warmwind">Cloud-Based & Secure:</strong> Access your data anywhere, anytime with enterprise-grade security and regular backups.
                     </p>
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <div className="w-2 h-2 bg-[#FF6F61] rounded-full mt-3 flex-shrink-0"></div>
-                    <p className="text-responsive-base text-gray-600 dark:text-gray-400">
-                      <strong className="text-gray-900 dark:text-white">Industry-Specific:</strong> From student management to application tracking, every tool is tailored for your workflow.
+                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 flex-shrink-0"></div>
+                    <p className="text-responsive-base text-warmwind-light">
+                      <strong className="text-warmwind">Industry-Specific:</strong> Tailored solutions for student management, application tracking, and business growth.
                     </p>
                   </div>
                 </div>
@@ -78,21 +110,21 @@ const About = () => {
             </div>
 
             {/* Image - Right Side */}
-            <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
+            <div className="scroll-reveal">
               <div className="relative">
                 <img 
                   src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800" 
                   alt="Education consultancy team working with ERP system"
-                  className="w-full h-80 object-cover rounded-2xl shadow-xl"
+                  className="w-full h-80 object-cover rounded-2xl warmwind-shadow-xl"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#FF6F61]/20 to-transparent rounded-2xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent rounded-2xl"></div>
               </div>
             </div>
           </div>
         </div>
 
         {/* Four Stats Cards Section */}
-        <div className="mb-20 animate-slide-up" style={{ animationDelay: '0.3s' }}>
+        <div className="mb-20 scroll-reveal">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { number: '500+', label: 'Education Consultancies', icon: Users },
@@ -102,15 +134,15 @@ const About = () => {
             ].map((stat, index) => (
               <div
                 key={stat.label}
-                className="bg-gray-50 dark:bg-dark-800 p-6 rounded-2xl text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 dark:border-dark-700"
+                className="warmwind-card text-center warmwind-shadow hover:warmwind-shadow-lg transition-all duration-300 transform hover:-translate-y-2"
               >
-                <div className="w-12 h-12 bg-[#FF6F61]/10 dark:bg-[#E55B4D]/30 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="text-[#FF6F61]" size={24} />
+                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="text-blue-600 dark:text-blue-400" size={24} />
                 </div>
-                <div className="text-responsive-3xl font-bold text-gray-900 dark:text-white mb-2">
+                <div className="text-responsive-3xl font-bold text-warmwind mb-2">
                   {stat.number}
                 </div>
-                <div className="text-responsive-sm text-gray-600 dark:text-gray-400 font-medium">
+                <div className="text-responsive-sm text-warmwind-light font-medium">
                   {stat.label}
                 </div>
               </div>
@@ -119,9 +151,9 @@ const About = () => {
         </div>
 
         {/* Who is it for Section */}
-        <div className="mb-20 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+        <div className="mb-20 scroll-reveal">
           <div className="text-center mb-12">
-            <h3 className="text-[clamp(1.5rem,4vw,2rem)] sm:text-[clamp(2rem,5vw,3rem)] md:text-[clamp(2rem,6vw,4rem)] font-extrabold text-gray-800 dark:text-gray-200 mb-4">
+            <h3 className="text-responsive-3xl font-bold text-warmwind mb-6">
               Who is it for?
             </h3>
           </div>
@@ -134,7 +166,7 @@ const About = () => {
                   <img 
                     src={audience.image}
                     alt={audience.title}
-                    className="w-full h-48 object-cover rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300"
+                    className="w-full h-48 object-cover rounded-xl warmwind-shadow group-hover:warmwind-shadow-lg transition-all duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -148,12 +180,12 @@ const About = () => {
             <div className="space-y-6">
               {targetAudiences.map((audience, index) => (
                 <div key={audience.title} className="flex items-start space-x-4">
-                  <div className="w-3 h-3 bg-[#FF6F61] rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-3 h-3 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
                   <div>
-                    <h4 className="text-responsive-lg font-semibold text-gray-900 dark:text-white mb-2">
+                    <h4 className="text-responsive-lg font-semibold text-warmwind mb-2">
                       {audience.title}
                     </h4>
-                    <p className="text-responsive-base text-gray-600 dark:text-gray-400">
+                    <p className="text-responsive-base text-warmwind-light">
                       {audience.description}
                     </p>
                   </div>
@@ -163,8 +195,44 @@ const About = () => {
           </div>
         </div>
 
-       
-        
+        {/* Core Features Preview Section */}
+        <div className="scroll-reveal">
+          <div className="text-center mb-12">
+            <h3 className="text-responsive-3xl font-bold text-warmwind mb-6">
+              Core Features
+            </h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {modules.map((module, index) => (
+              <div
+                key={module.title}
+                className="warmwind-card hover:warmwind-shadow-lg transition-all duration-300"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <module.icon className="text-blue-600 dark:text-blue-400" size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-responsive-lg font-semibold text-warmwind mb-2">
+                      {module.title}
+                    </h4>
+                    <p className="text-responsive-sm text-warmwind-light mb-3">
+                      {module.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {module.features.map((feature, idx) => (
+                        <span key={idx} className="text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-2 py-1 rounded-full">
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -1,406 +1,243 @@
-// import { ArrowRight, Users, FileText, DollarSign, Clock, Star, TrendingUp, Zap } from 'lucide-react';
-// import React from 'react';
-
-// const Hero = () => {
-//   const benefits = [
-//     { 
-//       icon: Users, 
-//       title: 'Track Student Applications', 
-//       description: 'Monitor and manage all student applications in one centralized dashboard',
-//       gradient: 'from-[#FF6F61] to-[#E55B4D]' // Coral theme
-//     },
-//     { 
-//       icon: Clock, 
-//       title: 'Automate Follow-ups', 
-//       description: 'Set up automated reminders and follow-up sequences for better engagement',
-//       gradient: 'from-[#FF6F61] to-[#E55B4D]' // Coral theme
-//     },
-//     { 
-//       icon: DollarSign, 
-//       title: 'Manage Invoices Effortlessly', 
-//       description: 'Generate, send, and track invoices with integrated payment processing',
-//       gradient: 'from-[#FF6F61] to-[#E55B4D]' // Coral theme
-//     },
-//     { 
-//       icon: FileText, 
-//       title: 'Streamlined Documentation', 
-//       description: 'Organize and access all student documents and records instantly',
-//       gradient: 'from-[#FF6F61] to-[#E55B4D]' // Coral theme
-//     }
-//   ];
-
-//   const stats = [
-//     { number: '10K+', label: 'Active Users', icon: Users },
-//     { number: '99.9%', label: 'Uptime', icon: TrendingUp },
-//     { number: '24/7', label: 'Support', icon: Star },
-//     { number: '50+', label: 'Countries', icon: Zap }
-//   ];
-
-//   return (
-//     <section id="home" className="min-h-screen bg-[radial-gradient(circle_at_20%_20%,_#fff5e6_0%,_#ffe4cc_70%)] dark:bg-[radial-gradient(circle_at_20%_20%,_#1a202c_0%,_#2d3748_70%)] pt-16 relative" style={{ willChange: 'transform' }}>
-      
-//       <div className="absolute top-20 left-10 w-72 h-72 bg-[#FF6F61]/10 rounded-full blur-3xl animate-pulse"></div>
-//       <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#E55B4D]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-
-//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 relative z-10">
-//         {/* Hero Content */}
-//         <div className="text-center mb-16 animate-fade-in" style={{ willChange: 'opacity' }}>
-         
-//           <div className="inline-flex items-center px-4 py-2 bg-[#FF6F61]/10 dark:bg-[#E55B4D]/30 rounded-full text-[#FF6F61] dark:text-[#E55B4D] text-sm font-normal mb-6 animate-slide-up">
-//             <Star className="w-4 h-4 mr-2" />
-//             #1 ERP Solution for Education Consultancies
-//           </div>
-
-//           {/* Main Heading */}
-//           <h1 className="text-[clamp(1.5rem,5vw,3rem)] sm:text-[clamp(2rem,6vw,4rem)] md:text-[clamp(2.5rem,7vw,6rem)] font-extrabold text-gray-800 dark:text-gray-200 mb-6 animate-slide-up leading-tight" style={{ willChange: 'opacity' }}>
-//             Transform Your Education Business with
-//             <span className="block text-[clamp(2rem,6vw,4rem)] sm:text-[clamp(2.5rem,7vw,5rem)] md:text-[clamp(3rem,8vw,6rem)] text-[#FF6F61] dark:text-[#E55B4D] mt-2 font-extrabold">
-//               Revlient ERP
-//             </span>
-//           </h1>
-
-//           {/* Subtitle */}
-//           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-normal mb-8 max-w-4xl mx-auto animate-slide-up leading-relaxed" style={{ animationDelay: '0.2s' }}>
-//             The complete ERP solution designed specifically for education consultancies. 
-//             <span className="block mt-2 font-normal text-[#FF6F61] dark:text-[#E55B4D]">
-//               Streamline operations, boost productivity, and grow your business.
-//             </span>
-//           </p>
-
-//           {/* CTA Buttons */}
-//           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-slide-up" style={{ animationDelay: '0.4s', willChange: 'transform' }}>
-//             <button className="group bg-[#FF6F61] hover:bg-[#E55B4D] text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center">
-//               Request a Demo
-//               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" size={20} />
-//             </button>
-//             <a href="#contact" className="bg-transparent border-2 border-[#FF6F61] text-[#FF6F61] dark:text-[#E55B4D] hover:bg-[#FF6F61] hover:dark:text-white hover:text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
-//               Contact Sales
-//             </a>
-//           </div>
-
-//           {/* Stats Row */}
-//           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16 animate-slide-up" style={{ animationDelay: '0.6s', willChange: 'transform' }}>
-//             {stats.map((stat, index) => (
-//               <div key={stat.label} className="text-center group">
-//                 <div className="inline-flex items-center justify-center w-12 h-12 bg-[#FF6F61]/10 dark:bg-[#E55B4D]/30 rounded-full mb-3 group-hover:bg-[#FF6F61] group-hover:text-white transition-all duration-300">
-//                   <stat.icon size={20} />
-//                 </div>
-//                 <div className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-1">{stat.number}</div>
-//                 <div className="text-sm text-gray-600 dark:text-gray-400 font-normal">{stat.label}</div>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-
-//         {/* Hero Image/Dashboard Mockup */}
-// <div className="mb-16 animate-slide-up" style={{ animationDelay: '0.6s' }}>
-//           <div className="relative max-w-5xl mx-auto">
-//             <div className="bg-white dark:bg-dark-800 rounded-2xl shadow-2xl p-6 sm:p-8 border border-gray-200 dark:border-dark-700">             
-//             {/* Dashboard Header */}
-//               <div className="flex items-center justify-between mb-6 pb-4 border-b border-gray-200 dark:border-dark-600">
-//                 <div className="flex items-center space-x-4">
-//                   <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
-//                     <span className="text-white font-bold text-sm">R</span>
-//                   </div>
-//                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Revlient ERP Dashboard</h3>
-//                 </div>
-//                 <div className="flex space-x-2">
-//                   <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-//                   <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-//                   <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-//                 </div>
-//               </div>
-
-//               {/* Dashboard Content */}
-//               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-//                 <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-4 rounded-xl text-white">
-//                   <div className="flex items-center justify-between">
-//                     <div>
-//                       <p className="text-blue-100 text-sm font-normal">Total Applications</p>
-//                       <p className="text-2xl font-bold">1,247</p>
-//                     </div>
-//                     <Users className="text-blue-200" size={32} />
-//                 </div>
-//                 </div>
-//                 <div className="bg-gradient-to-r from-green-500 to-green-600 p-4 rounded-xl text-white">
-//                   <div className="flex items-center justify-between">
-//                     <div>
-//                       <p className="text-green-100 text-sm font-normal">Revenue This Month</p>
-//                       <p className="text-2xl font-bold">$24,580</p>
-//                     </div>
-//                     <DollarSign className="text-green-200" size={32} />
-//                 </div>
-//                 </div>
-//                 <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-4 rounded-xl text-white">
-//                   <div className="flex items-center justify-between">
-//                     <div>
-//                       <p className="text-purple-100 text-sm font-normal">Pending Follow-ups</p>
-//                       <p className="text-2xl font-bold">23</p>
-//                     </div>
-//                     <Clock className="text-purple-200" size={32} />
-//                 </div>
-//                 </div>
-//               </div>
-
-//               {/* Dashboard Table Preview */}
-//               <div className="bg-gray-50 dark:bg-dark-700 rounded-xl p-4">
-//                 <div className="flex items-center justify-between mb-4">
-//                   <h4 className="font-semibold text-gray-900 dark:text-white">Recent Applications</h4>
-//                   <span className="text-sm text-gray-500 dark:text-gray-400">View All</span>
-//                 </div>
-//                 <div className="space-y-3">
-//                   {[1, 2, 3].map((item) => (
-//                     <div key={item} className="flex items-center justify-between p-3 bg-white dark:bg-dark-800 rounded-lg">
-//                       <div className="flex items-center space-x-3">
-//                         <div className="w-8 h-8 bg-gray-300 dark:bg-dark-600 rounded-full"></div>
-//                         <div>
-//                           <div className="w-24 h-3 bg-gray-300 dark:bg-dark-600 rounded"></div>
-//                           <div className="w-16 h-2 bg-gray-200 dark:bg-dark-700 rounded mt-1"></div>
-//                         </div>
-//                       </div>
-//                       <div className="w-16 h-6 bg-green-100 dark:bg-green-900 rounded-full"></div>
-//                     </div>
-//                   ))}
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-       
-
-//         {/* Benefits Section */}
-//         <div className="animate-slide-up" style={{ animationDelay: '1s', willChange: 'opacity, transform' }}>
-//           <div className="text-center mb-12">
-//             <h2 className="text-[clamp(1.5rem,4vw,2rem)] sm:text-[clamp(2rem,5vw,3rem)] md:text-[clamp(2rem,6vw,4rem)] font-extrabold text-gray-800 dark:text-gray-200 mb-4">
-//               Key Benefits
-//             </h2>
-//             <p className="text-lg sm:text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-200 mb-8 max-w-4xl mx-auto animate-slide-up leading-relaxed">
-//               Discover how Revlient ERP can transform your education consultancy operations
-//             </p>
-//           </div>
-
-//           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-//             {benefits.map((benefit, index) => (
-//               <div
-//                 key={benefit.title}
-//                 className="group bg-white dark:bg-dark-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-slide-up border border-gray-100 dark:border-dark-700 overflow-hidden"
-//                 style={{ animationDelay: `${index * 0.2}s`, willChange: 'transform' }}
-//               >
-//                 {/* Background Gradient */}
-//                 <div className={`absolute inset-0 bg-gradient-to-br ${benefit.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
-
-//                 {/* Icon */}
-//                 <div className={`relative w-12 h-12 bg-${benefit.gradient.split(' ')[0]}/10 dark:bg-${benefit.gradient.split(' ')[1]}/30 rounded-xl flex items-center justify-center mb-4 group-hover:bg-${benefit.gradient.split(' ')[0]} transition-colors duration-300 shadow-lg`}>
-//                   <benefit.icon className="text-[#FF6F61] group-hover:text-white transition-colors duration-300" size={24} />
-//                 </div>
-
-//                 {/* Content */}
-//                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-[#FF6F61] dark:group-hover:text-[#E55B4D] transition-colors duration-300">
-//                   {benefit.title}
-//                 </h3>
-//                 <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-//                   {benefit.description}
-//                 </p>
-
-//                 {/* Hover Effect  */}
-//                 <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#FF6F61] to-[#E55B4D] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Hero;
-import React, { useState, useEffect, useRef } from 'react';
-
-// ArrowRight icon component (inline to avoid external dependencies)
-const ArrowRight = ({ className = "", ...props }) => (
-  <svg 
-    className={className}
-    width="24" 
-    height="24" 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="2" 
-    strokeLinecap="round" 
-    strokeLinejoin="round"
-    {...props}
-  >
-    <path d="M5 12h14"/>
-    <path d="m12 5 7 7-7 7"/>
-  </svg>
-);
+import React, { useState, useEffect } from 'react';
+import { ArrowRight, Play, Pause, Volume2, VolumeX } from 'lucide-react';
 
 const Hero = () => {
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const [videoStates, setVideoStates] = useState([
+    { position: 'center', opacity: 1, scale: 1 },
+    { position: 'hidden', opacity: 0, scale: 0.8 },
+    { position: 'hidden', opacity: 0, scale: 0.8 }
+  ]);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [isMuted, setIsMuted] = useState(true);
+
   const videos = [
     {
       id: 1,
-      title: "Student Management Demo",
-      src: "/sample.mp4",
+      title: "Student Management System",
+      src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
       poster: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       id: 2,
-      title: "Financial Tracking Features", 
-      src: "/sample.mp4",
+      title: "Financial Tracking Dashboard",
+      src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
       poster: "https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       id: 3,
-      title: "Document Processing System",
-      src: "/sample.mp4", 
+      title: "Document Processing Workflow",
+      src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
       poster: "https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=800"
     }
   ];
 
-  const [currentVideo, setCurrentVideo] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-  const timeoutRef = useRef(null);
-
+  // Video transition logic - alternating left and right
   useEffect(() => {
-    timeoutRef.current = setTimeout(() => {
-      setIsTransitioning(true);
-      
-      setTimeout(() => {
-        setCurrentVideo((prev) => (prev + 1) % videos.length);
-        setIsTransitioning(false);
-      }, 400);
+    const interval = setInterval(() => {
+      if (window.innerWidth >= 1024) {
+        setVideoStates(prevStates => {
+          const newStates = [...prevStates];
+          const centerIndex = newStates.findIndex(state => state.position === 'center');
+          
+          if (centerIndex !== -1) {
+            // Alternate between left and right
+            const direction = currentVideoIndex % 2 === 0 ? 'right' : 'left';
+            newStates[centerIndex] = { position: direction, opacity: 0.4, scale: 0.7 };
+          }
+          
+          // Bring next video to center
+          const nextIndex = (currentVideoIndex + 1) % videos.length;
+          newStates[nextIndex] = { position: 'center', opacity: 1, scale: 1 };
+          
+          return newStates;
+        });
+        
+        setCurrentVideoIndex(prev => (prev + 1) % videos.length);
+      }
     }, 5000);
 
-    return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-    };
-  }, [currentVideo, videos.length]);
+    return () => clearInterval(interval);
+  }, [currentVideoIndex, videos.length]);
 
-  const getVideoStyle = (index) => {
-    if (index === currentVideo && !isTransitioning) {
-      return {
-        transform: 'translateX(0) scale(1)',
-        opacity: 1,
-        zIndex: 30
-      };
-    }
+  const togglePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  const toggleMute = () => {
+    setIsMuted(!isMuted);
+  };
+
+  const getVideoStyle = (position) => {
+    const baseStyle = "absolute top-1/2 transform -translate-y-1/2 transition-all duration-1000 ease-in-out";
     
-    if (isTransitioning && index === currentVideo) {
-      // Current video moving to its designated side
-      const moveToRight = currentVideo % 2 === 0; // Even index goes right, odd goes left
-      return {
-        transform: `translateX(${moveToRight ? '60%' : '-60%'}) scale(0.8)`,
-        opacity: 0.7,
-        zIndex: 20
-      };
+    switch (position.position) {
+      case 'center':
+        return `${baseStyle} left-1/2 -translate-x-1/2 z-30`;
+      case 'left':
+        return `${baseStyle} left-[10%] z-20`;
+      case 'right':
+        return `${baseStyle} right-[10%] z-20`;
+      default:
+        return `${baseStyle} left-[100%] z-0`;
     }
-    
-    if (isTransitioning && index === (currentVideo + 1) % videos.length) {
-      return {
-        transform: 'translateX(0) scale(1)',
-        opacity: 1,
-        zIndex: 30
-      };
-    }
-    
-    // Position videos on sides based on their previous positions
-    if (index < currentVideo || (currentVideo === 0 && index === videos.length - 1)) {
-      const isEvenIndex = index % 2 === 0;
-      return {
-        transform: `translateX(${isEvenIndex ? '60%' : '-60%'}) scale(0.8)`,
-        opacity: 0.6,
-        zIndex: 10
-      };
-    }
-    
-    // Future videos stay hidden
-    return {
-      transform: 'translateX(0) scale(0.8)',
-      opacity: 0,
-      zIndex: 5
-    };
   };
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 overflow-hidden">
-      {/* Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 pt-24 pb-24">
+    <section id="home" className="relative min-h-screen bg-warmwind pt-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         
-        {/* Video Showcase Container - Increased width to prevent cutting */}
-        <div className="relative w-full h-[400px] mb-16" style={{ width: '140%', marginLeft: '-20%' }}>
-          <div className="absolute inset-0 flex items-center justify-center">
-            {videos.map((video, index) => (
-              <div
-                key={video.id}
-                className="absolute w-[600px] h-[320px] transition-all duration-700 ease-out"
-                style={getVideoStyle(index)}
-              >
-                <div className="relative w-full h-full">
-                  <video
-                    className="w-full h-full object-cover rounded-xl shadow-2xl bg-white"
-                    src={video.src}
-                    poster={video.poster}
-                    autoPlay={index === currentVideo && !isTransitioning}
-                    muted
-                    loop={false}
-                    playsInline
-                  />
-                  <div className="absolute inset-0 rounded-xl border border-gray-200/20"></div>
-                  
-                  {/* Video Title */}
-                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-white/95 backdrop-blur-sm text-gray-900 px-4 py-2 rounded-lg shadow-lg text-sm font-medium border border-gray-200/20">
-                      {video.title}
+        {/* Main Container with Warmwind-style Background */}
+        <div className="relative bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700 rounded-3xl overflow-hidden warmwind-shadow-xl">
+          
+          {/* Warmwind-inspired Background Pattern */}
+          <div className="absolute inset-0">
+            {/* Subtle gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-blue-500/10 dark:from-slate-900/20 dark:to-slate-700/10"></div>
+            
+            {/* Floating elements for depth */}
+            <div className="absolute top-20 left-10 w-32 h-32 bg-blue-200/20 dark:bg-blue-400/10 rounded-full blur-3xl"></div>
+            <div className="absolute top-40 right-20 w-24 h-24 bg-indigo-200/20 dark:bg-indigo-400/10 rounded-full blur-2xl"></div>
+            <div className="absolute bottom-20 left-1/3 w-40 h-40 bg-purple-200/20 dark:bg-purple-400/10 rounded-full blur-3xl"></div>
+          </div>
+
+          <div className="relative z-10 px-8 py-16">
+            
+            {/* Video Section */}
+            <div className="mb-12">
+              {/* Desktop: 3 Videos Layout */}
+              <div className="hidden lg:block relative h-80 mb-8">
+                {videos.map((video, index) => (
+                  <div
+                    key={video.id}
+                    className={getVideoStyle(videoStates[index])}
+                    style={{
+                      opacity: videoStates[index].opacity,
+                      transform: `translateY(-50%) scale(${videoStates[index].scale}) ${
+                        videoStates[index].position === 'center' ? 'translateX(-50%)' : ''
+                      }`
+                    }}
+                  >
+                    <div className="relative warmwind-card overflow-hidden shadow-2xl">
+                      <video
+                        className="w-96 h-64 object-cover"
+                        src={video.src}
+                        poster={video.poster}
+                        autoPlay={videoStates[index].position === 'center' && isPlaying}
+                        muted={isMuted}
+                        loop
+                        playsInline
+                      />
+                      
+                      {/* Video Controls - Only on center video */}
+                      {videoStates[index].position === 'center' && (
+                        <div className="absolute top-4 right-4 flex space-x-2">
+                          <button
+                            onClick={togglePlayPause}
+                            className="w-8 h-8 bg-black/60 hover:bg-black/80 text-white rounded-full flex items-center justify-center transition-all duration-200"
+                          >
+                            {isPlaying ? <Pause size={12} /> : <Play size={12} />}
+                          </button>
+                          <button
+                            onClick={toggleMute}
+                            className="w-8 h-8 bg-black/60 hover:bg-black/80 text-white rounded-full flex items-center justify-center transition-all duration-200"
+                          >
+                            {isMuted ? <VolumeX size={12} /> : <Volume2 size={12} />}
+                          </button>
+                        </div>
+                      )}
+
+                      {/* Video Title Overlay */}
+                      {videoStates[index].position === 'center' && (
+                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                          <p className="text-white font-medium text-sm">{video.title}</p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Mobile: Single Video */}
+              <div className="lg:hidden mb-8">
+                <div className="max-w-sm mx-auto">
+                  <div className="relative warmwind-card overflow-hidden">
+                    <video
+                      className="w-full h-64 object-cover"
+                      src={videos[currentVideoIndex].src}
+                      poster={videos[currentVideoIndex].poster}
+                      autoPlay={isPlaying}
+                      muted={isMuted}
+                      loop
+                      playsInline
+                    />
+                    
+                    {/* Mobile Video Controls */}
+                    <div className="absolute top-4 right-4 flex space-x-2">
+                      <button
+                        onClick={togglePlayPause}
+                        className="w-8 h-8 bg-black/60 hover:bg-black/80 text-white rounded-full flex items-center justify-center transition-all duration-200"
+                      >
+                        {isPlaying ? <Pause size={12} /> : <Play size={12} />}
+                      </button>
+                      <button
+                        onClick={toggleMute}
+                        className="w-8 h-8 bg-black/60 hover:bg-black/80 text-white rounded-full flex items-center justify-center transition-all duration-200"
+                      >
+                        {isMuted ? <VolumeX size={12} /> : <Volume2 size={12} />}
+                      </button>
+                    </div>
+
+                    {/* Mobile Video Title */}
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                      <p className="text-white font-medium text-sm">{videos[currentVideoIndex].title}</p>
                     </div>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-          
-          {/* Progress Indicators */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
-            {videos.map((_, index) => (
-              <div
-                key={index}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  index === currentVideo 
-                    ? 'bg-orange-500 w-6' 
-                    : 'bg-gray-400/30 w-2'
-                }`}
-              />
-            ))}
+
+              {/* Progress Indicators */}
+              <div className="flex justify-center space-x-3">
+                {videos.map((_, index) => (
+                  <div
+                    key={index}
+                    className={`h-2 rounded-full transition-all duration-500 ${
+                      index === currentVideoIndex 
+                        ? 'w-8 bg-blue-500 shadow-lg' 
+                        : 'w-2 bg-gray-300 dark:bg-gray-600'
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="text-center mb-12">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button className="warmwind-btn-primary inline-flex items-center px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                  Start Free Trial
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </button>
+                <button className="warmwind-btn-secondary inline-flex items-center px-8 py-4 text-lg font-semibold rounded-xl">
+                  Watch Demo
+                  <Play className="ml-2 w-5 h-5" />
+                </button>
+              </div>
+            </div>
+
+            {/* Heading and Content */}
+            <div className="text-center">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-warmwind mb-6 leading-tight">
+                Transform Your Education Consultancy
+              </h1>
+             
+              <p className="text-lg sm:text-xl text-warmwind-light max-w-4xl mx-auto leading-relaxed">
+                The complete ERP solution designed specifically for education consultancies. 
+                Streamline operations, boost productivity, and grow your business with intelligent automation.
+              </p>
+            </div>
           </div>
         </div>
-
-        {/* Main Content */}
-        <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
-            Enterprise Education Management Platform
-          </h1>
-          <p className="text-xl sm:text-2xl text-gray-700 mb-10 leading-relaxed font-medium max-w-3xl mx-auto">
-            Comprehensive ERP solution engineered for educational institutions and consultancies. 
-            Optimize workflows, enhance operational efficiency, and accelerate institutional growth.
-          </p>
-          <div className='flex justify-center gap-10'>
-          <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-400 to-pink-500 text-white rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl group">
-            Request Demo
-            <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-1" />
-          </button>
-          <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-400 to-pink-500 text-white rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl group">
-            Contact Sales
-            <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-1" />
-          </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 right-20 w-72 h-72 bg-orange-100/50 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-96 h-96 bg-gray-200/30 rounded-full blur-3xl"></div>
       </div>
     </section>
   );

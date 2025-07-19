@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Mail, 
   Phone, 
@@ -104,7 +104,7 @@ const Contact = () => {
       icon: Globe,
       name: 'Website',
       url: '',
-      color: 'hover:text-primary-600'
+      color: 'hover:text-blue-600'
     },
     {
       icon: Facebook,
@@ -114,38 +114,56 @@ const Contact = () => {
     }
   ];
 
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, observerOptions);
+
+    const elements = document.querySelectorAll('.scroll-reveal');
+    elements.forEach(el => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="contact" className="py-16 lg:py-24 bg-gray-50 dark:bg-dark-800 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+    <section id="contact" className="py-16 lg:py-24 bg-white dark:bg-gray-900 transition-colors duration-300 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-responsive-4xl font-bold text-gray-900 dark:text-white mb-6">
+        <div className="text-center mb-16 scroll-reveal" style={{ animationDelay: '0s' }}>
+          <h2 className="text-[clamp(1.5rem,4vw,2rem)] sm:text-[clamp(2rem,5vw,3rem)] md:text-[clamp(2rem,6vw,4rem)] font-extrabold text-gray-800 dark:text-gray-200 mb-6">
             Contact Us
           </h2>
-          <p className="text-responsive-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Ready to transform your education consultancy? Get in touch with our team for a personalized demo and consultation.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          
           {/* Contact Form - Left Side */}
-          <div className="animate-slide-up h-full">
-            <div className="bg-white dark:bg-dark-900 rounded-3xl shadow-xl p-8 border border-gray-200 dark:border-dark-700 h-full flex flex-col">
-              <h3 className="text-responsive-2xl font-bold text-gray-900 dark:text-white mb-6">
+          <div className="scroll-reveal" style={{ animationDelay: '0s' }}>
+            <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-lg p-6 sm:p-8 border border-gray-200 dark:border-gray-700 h-full flex flex-col">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-200 mb-6">
                 Send us a message
               </h3>
-              
+
               {isSubmitted ? (
-                <div className="text-center py-12 flex-1 flex flex-col justify-center">
+                <div className="text-center py-8 flex-1 flex flex-col justify-center">
                   <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="w-8 h-8 text-green-600 dark:text-green-400" />
                   </div>
-                  <h4 className="text-responsive-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  <h4 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-gray-200 mb-2">
                     Message Sent Successfully!
                   </h4>
-                  <p className="text-responsive-base text-gray-600 dark:text-gray-400">
+                  <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400">
                     We'll get back to you within 24 hours.
                   </p>
                 </div>
@@ -164,7 +182,7 @@ const Contact = () => {
                         required
                         value={formData.name}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 rounded-xl focus:ring-2 focus:ring-primary-600 focus:border-transparent bg-white dark:bg-dark-800 text-gray-900 dark:text-white transition-all duration-300"
+                        className="w-full px-4 py-2 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-all duration-300"
                         placeholder="John Doe"
                       />
                     </div>
@@ -179,7 +197,7 @@ const Contact = () => {
                         required
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 rounded-xl focus:ring-2 focus:ring-primary-600 focus:border-transparent bg-white dark:bg-dark-800 text-gray-900 dark:text-white transition-all duration-300"
+                        className="w-full px-4 py-2 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-all duration-300"
                         placeholder="john@company.com"
                       />
                     </div>
@@ -197,7 +215,7 @@ const Contact = () => {
                         name="company"
                         value={formData.company}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 rounded-xl focus:ring-2 focus:ring-primary-600 focus:border-transparent bg-white dark:bg-dark-800 text-gray-900 dark:text-white transition-all duration-300"
+                        className="w-full px-4 py-2 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-all duration-300"
                         placeholder="Your Company"
                       />
                     </div>
@@ -211,7 +229,7 @@ const Contact = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 rounded-xl focus:ring-2 focus:ring-primary-600 focus:border-transparent bg-white dark:bg-dark-800 text-gray-900 dark:text-white transition-all duration-300"
+                        className="w-full px-4 py-2 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-all duration-300"
                         placeholder="+1 (555) 123-4567"
                       />
                     </div>
@@ -226,10 +244,10 @@ const Contact = () => {
                       id="message"
                       name="message"
                       required
-                      rows={5}
+                      rows={4}
                       value={formData.message}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 rounded-xl focus:ring-2 focus:ring-primary-600 focus:border-transparent bg-white dark:bg-dark-800 text-gray-900 dark:text-white transition-all duration-300 resize-none h-32"
+                      className="w-full px-4 py-2 sm:py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-all duration-300 resize-none h-28 sm:h-32"
                       placeholder="Tell us about your requirements and how we can help..."
                     />
                   </div>
@@ -250,7 +268,7 @@ const Contact = () => {
                       />
                       <label
                         htmlFor="file"
-                        className="w-full px-4 py-3 border-2 border-dashed border-gray-300 dark:border-dark-600 rounded-xl cursor-pointer hover:border-primary-600 dark:hover:border-primary-400 transition-colors duration-300 flex items-center justify-center bg-gray-50 dark:bg-dark-700"
+                        className="w-full px-4 py-2 sm:py-3 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-xl cursor-pointer hover:border-blue-600 dark:hover:border-blue-400 transition-colors duration-300 flex items-center justify-center bg-gray-50 dark:bg-gray-800"
                       >
                         <Upload className="w-5 h-5 text-gray-400 mr-2" />
                         <span className="text-gray-600 dark:text-gray-400">
@@ -264,7 +282,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:bg-primary-600 text-white py-4 px-6 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center mt-auto"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 sm:py-3 px-6 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center mt-auto"
                   >
                     {isSubmitting ? (
                       <>
@@ -284,30 +302,29 @@ const Contact = () => {
           </div>
 
           {/* Contact Information - Right Side */}
-          <div className="animate-slide-up h-full" style={{ animationDelay: '0.2s' }}>
+          <div className="scroll-reveal" style={{ animationDelay: '0.2s' }}>
             <div className="space-y-8 h-full flex flex-col">
-              
               {/* Contact Details */}
-              <div className="bg-white dark:bg-dark-900 rounded-3xl shadow-xl p-8 border border-gray-200 dark:border-dark-700 flex-1">
-                <h3 className="text-responsive-2xl font-bold text-gray-900 dark:text-white mb-6">
+              <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-lg p-6 sm:p-8 border border-gray-200 dark:border-gray-700 flex-1">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-200 mb-6">
                   Get in touch
                 </h3>
-                
+
                 <div className="space-y-6 mb-8">
                   {contactInfo.map((info, index) => (
                     <a
                       key={info.label}
                       href={info.link}
-                      className="flex items-center space-x-4 p-4 rounded-xl hover:bg-gray-50 dark:hover:bg-dark-800 transition-colors duration-300 group"
+                      className="flex items-center space-x-4 p-4 rounded-xl hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors duration-300 group"
                     >
-                      <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center group-hover:bg-primary-600 transition-colors duration-300">
-                        <info.icon className="w-6 h-6 text-primary-600 group-hover:text-white transition-colors duration-300" />
+                      <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
+                        <info.icon className="w-6 h-6 text-blue-600 dark:text-blue-400 group-hover:text-white transition-colors duration-300" />
                       </div>
                       <div>
                         <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
                           {info.label}
                         </p>
-                        <p className="text-responsive-base font-semibold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
+                        <p className="text-base sm:text-lg font-semibold text-gray-900 dark:text-gray-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                           {info.value}
                         </p>
                       </div>
@@ -317,17 +334,17 @@ const Contact = () => {
 
                 {/* Location */}
                 <div className="flex items-center space-x-4 p-4 rounded-xl mb-8">
-                  <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                  <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                   </div>
                   <div>
                     <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
                       Office Location
                     </p>
-                    <p className="text-responsive-base font-semibold text-gray-900 dark:text-white">
+                    <p className="text-base sm:text-lg font-semibold text-gray-900 dark:text-gray-200">
                       Kochi, India
                     </p>
-                    <p className="text-responsive-sm text-gray-600 dark:text-gray-400">
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
                       123 Business District, Suite XYZ
                     </p>
                   </div>
@@ -335,7 +352,7 @@ const Contact = () => {
 
                 {/* Social Media */}
                 <div className="mb-8">
-                  <h4 className="text-responsive-lg font-bold text-gray-900 dark:text-white mb-6">
+                  <h4 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-200 mb-6">
                     Follow us
                   </h4>
                   <div className="flex space-x-4">
@@ -345,7 +362,7 @@ const Contact = () => {
                         href={social.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`w-12 h-12 bg-gray-100 dark:bg-dark-700 rounded-xl flex items-center justify-center text-gray-600 dark:text-gray-400 ${social.color} transition-all duration-300 transform hover:scale-110 hover:shadow-lg`}
+                        className={`w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded-xl flex items-center justify-center text-gray-600 dark:text-gray-400 ${social.color} transition-all duration-300 hover:scale-110 hover:shadow-lg`}
                       >
                         <social.icon size={20} />
                       </a>
@@ -354,7 +371,7 @@ const Contact = () => {
                 </div>
 
                 {/* CTA Button */}
-                <button className="w-full bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:bg-primary-600 text-white py-4 px-6 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center mt-auto">
+                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 sm:py-3 px-6 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center mt-auto">
                   <Calendar className="w-5 h-5 mr-2" />
                   Book a Free Demo
                 </button>

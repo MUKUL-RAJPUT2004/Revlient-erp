@@ -8,49 +8,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#FF6F61',
-          700: '#E55B4D',
-          800: '#1e40af',
-          900: '#1e3a8a',
-        },
+        // Warmwind-inspired color palette
         warmwind: {
-          orange: {
-            100: '#fed7aa',
-            200: '#fdba74',
-            300: '#fb923c',
-            400: '#f97316',
-            500: '#ea580c',
-          },
-          pink: {
-            100: '#fce7f3',
-            200: '#fbcfe8',
-            300: '#f9a8d4',
-            400: '#f472b6',
-            500: '#ec4899',
-          },
-          blue: {
-            100: '#dbeafe',
-            200: '#bfdbfe',
-            300: '#93c5fd',
-            400: '#60a5fa',
-            500: '#3b82f6',
-          },
-          purple: {
-            100: '#e9d5ff',
-            200: '#d8b4fe',
-            300: '#c084fc',
-            400: '#a855f7',
-            500: '#9333ea',
-          }
-        },
-        dark: {
           50: '#f8fafc',
           100: '#f1f5f9',
           200: '#e2e8f0',
@@ -61,14 +20,10 @@ export default {
           700: '#334155',
           800: '#1e293b',
           900: '#0f172a',
-        },
-        accent: {
-          100: '#FFB199',
-          200: '#FF9466',
-        },
+        }
       },
       fontFamily: {
-        sans: ['Poppins', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'responsive-xs': 'clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem)',
@@ -86,7 +41,7 @@ export default {
         'fade-in': 'fadeIn 0.6s ease-out',
         'slide-up': 'slideUp 0.6s ease-out',
         'float': 'float 3s ease-in-out infinite',
-        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite'
       },
       keyframes: {
         fadeIn: {
@@ -101,6 +56,9 @@ export default {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-10px)' },
         }
+      },
+      backdropBlur: {
+        xs: '2px',
       }
     },
   },

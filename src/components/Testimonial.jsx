@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
 
 const Testimonials = () => {
@@ -56,39 +56,57 @@ const Testimonials = () => {
       <Star
         key={index}
         className={`w-5 h-5 ${
-          index < rating ? 'text-[#FF6F61] fill-current' : 'text-gray-300 dark:text-gray-600'
+          index < rating ? 'text-blue-600 fill-current' : 'text-gray-300 dark:text-gray-600'
         }`}
       />
     ));
   };
 
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, observerOptions);
+
+    const elements = document.querySelectorAll('.scroll-reveal');
+    elements.forEach(el => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="py-16 lg:py-24 bg-gray-50 dark:bg-dark-800 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+    <section className="py-16 lg:py-24 bg-white dark:bg-gray-900 transition-colors duration-300 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-16 scroll-reveal" style={{ animationDelay: '0s' }}>
           <h2 className="text-[clamp(1.5rem,4vw,2rem)] sm:text-[clamp(2rem,5vw,3rem)] md:text-[clamp(2rem,6vw,4rem)] font-extrabold text-gray-800 dark:text-gray-200">
             Testimonials
           </h2>
         </div>
 
         {/* Testimonials Grid */}
-        <div className="relative animate-slide-up" style={{ animationDelay: '0.1s' }}>
+        <div className="scroll-reveal" style={{ animationDelay: '0.1s' }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            
             {/* Left Navigation Button */}
             <div className="hidden lg:flex justify-start">
               <button
                 onClick={prevTestimonial}
-                className="w-12 h-12 bg-white/10 dark:bg-dark-700/50 hover:bg-white/20 dark:hover:bg-dark-600/50 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-gray-200 dark:border-dark-600"
+                className="w-12 h-12 bg-white/10 dark:bg-gray-800/50 hover:bg-blue-50 dark:hover:bg-gray-700/50 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-gray-200 dark:border-gray-700"
               >
-                <ChevronLeft className="w-6 h-6 text-gray-600 dark:text-gray-300" />
+                <ChevronLeft className="w-6 h-6 text-gray-600 dark:text-gray-400" />
               </button>
             </div>
 
             {/* Current Testimonial */}
-            <div className="bg-white dark:bg-dark-900 rounded-3xl p-8 shadow-xl transition-all duration-500 transform hover:scale-105 border border-gray-200 dark:border-dark-700">
+            <div className="bg-white dark:bg-gray-800 rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
               <div className="flex items-center mb-6">
                 <img
                   src={testimonials[currentTestimonial].image}
@@ -96,32 +114,32 @@ const Testimonials = () => {
                   className="w-16 h-16 rounded-full object-cover mr-4 shadow-lg"
                 />
                 <div>
-                  <h4 className="font-bold text-gray-800 dark:text-white text-responsive-lg">
+                  <h4 className="font-bold text-gray-900 dark:text-gray-200 text-lg sm:text-xl">
                     {testimonials[currentTestimonial].name}
                   </h4>
-                  <p className="text-gray-600 dark:text-gray-300 text-responsive-base font-normal">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">
                     {testimonials[currentTestimonial].role}
                   </p>
-                  <p className="text-[#FF6F61] dark:text-[#E55B4D] font-normal text-responsive-base">
+                  <p className="text-blue-600 dark:text-blue-400 text-sm sm:text-base">
                     {testimonials[currentTestimonial].company}
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-center mb-4">
                 {renderStars(testimonials[currentTestimonial].rating)}
               </div>
-              
+
               <div className="relative">
                 <Quote className="w-8 h-8 text-gray-300 dark:text-gray-600 absolute -top-2 -left-2" />
-                <p className="text-gray-700 dark:text-gray-300 text-responsive-base font-normal leading-relaxed pl-6">
+                <p className="text-gray-700 dark:text-gray-300 text-base sm:text-lg font-normal leading-relaxed pl-6">
                   {testimonials[currentTestimonial].content}
                 </p>
               </div>
             </div>
 
             {/* Next Testimonial Preview */}
-            <div className="bg-white/10 dark:bg-dark-700/50 backdrop-blur-sm rounded-3xl p-8 transition-all duration-500 hover:bg-white/20 dark:hover:bg-dark-600/50 border border-gray-200 dark:border-dark-600">
+            <div className="bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm rounded-3xl p-6 sm:p-8 transition-all duration-300 hover:bg-blue-50 dark:hover:bg-gray-700/50 border border-gray-200 dark:border-gray-700">
               <div className="flex items-center mb-6">
                 <img
                   src={testimonials[(currentTestimonial + 1) % testimonials.length].image}
@@ -129,16 +147,16 @@ const Testimonials = () => {
                   className="w-12 h-12 rounded-full object-cover mr-4 opacity-80"
                 />
                 <div>
-                  <h4 className="font-bold text-gray-800 dark:text-white text-responsive-base">
+                  <h4 className="font-bold text-gray-900 dark:text-gray-200 text-base sm:text-lg">
                     {testimonials[(currentTestimonial + 1) % testimonials.length].name}
                   </h4>
-                  <p className="text-gray-600 dark:text-gray-300 text-responsive-sm font-normal">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
                     {testimonials[(currentTestimonial + 1) % testimonials.length].company}
                   </p>
                 </div>
               </div>
-              
-              <p className="text-gray-600 dark:text-gray-300 text-responsive-sm font-normal leading-relaxed line-clamp-4">
+
+              <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base font-normal leading-relaxed line-clamp-4">
                 {testimonials[(currentTestimonial + 1) % testimonials.length].content}
               </p>
             </div>
@@ -147,9 +165,9 @@ const Testimonials = () => {
             <div className="hidden lg:flex justify-end">
               <button
                 onClick={nextTestimonial}
-                className="w-12 h-12 bg-white/10 dark:bg-dark-700/50 hover:bg-white/20 dark:hover:bg-dark-600/50 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-gray-200 dark:border-dark-600"
+                className="w-12 h-12 bg-white/10 dark:bg-gray-800/50 hover:bg-blue-50 dark:hover:bg-gray-700/50 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-gray-200 dark:border-gray-700"
               >
-                <ChevronRight className="w-6 h-6 text-gray-600 dark:text-gray-300" />
+                <ChevronRight className="w-6 h-6 text-gray-600 dark:text-gray-400" />
               </button>
             </div>
           </div>
@@ -158,15 +176,15 @@ const Testimonials = () => {
           <div className="flex lg:hidden justify-center mt-8 space-x-4">
             <button
               onClick={prevTestimonial}
-              className="w-12 h-12 bg-white/10 dark:bg-dark-700/50 hover:bg-white/20 dark:hover:bg-dark-600/50 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-gray-200 dark:border-dark-600"
+              className="w-12 h-12 bg-white/10 dark:bg-gray-800/50 hover:bg-blue-50 dark:hover:bg-gray-700/50 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-gray-200 dark:border-gray-700"
             >
-              <ChevronLeft className="w-6 h-6 text-gray-600 dark:text-gray-300" />
+              <ChevronLeft className="w-6 h-6 text-gray-600 dark:text-gray-400" />
             </button>
             <button
               onClick={nextTestimonial}
-              className="w-12 h-12 bg-white/10 dark:bg-dark-700/50 hover:bg-white/20 dark:hover:bg-dark-600/50 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-gray-200 dark:border-dark-600"
+              className="w-12 h-12 bg-white/10 dark:bg-gray-800/50 hover:bg-blue-50 dark:hover:bg-gray-700/50 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-gray-200 dark:border-gray-700"
             >
-              <ChevronRight className="w-6 h-6 text-gray-600 dark:text-gray-300" />
+              <ChevronRight className="w-6 h-6 text-gray-600 dark:text-gray-400" />
             </button>
           </div>
 
@@ -178,7 +196,7 @@ const Testimonials = () => {
                 onClick={() => setCurrentTestimonial(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentTestimonial 
-                    ? 'bg-[#FF6F61] scale-125' 
+                    ? 'bg-blue-600 scale-125' 
                     : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'
                 }`}
               />
