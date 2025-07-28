@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import { useTheme } from '../hooks/useTheme';
+import logo from '../asserts/logo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,18 +23,12 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <div className="flex items-center">
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-sm">R</span>
-                </div>
-                <span className="text-xl font-semibold text-warmwind">
-                  Revlient
-                </span>
-              </div>
-            </div>
+         <div className="flex-shrink-0">
+          <div className="flex items-center">
+            <img src={logo} alt="Logo" width="32" height="32" className="mx-2" />
+            <span className="text-xl font-semibold text-warmwind">Revlient</span>
           </div>
+        </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">

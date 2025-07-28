@@ -77,7 +77,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="bg-warmwind-card duration-300">
+    <footer className="bg-warmwind-card duration-300 relative z-10">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 scroll-reveal" style={{ animationDelay: '0s' }}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -187,8 +187,8 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-200 dark:border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 scroll-reveal" style={{ animationDelay: '0.2s' }}>
+      <div className="bg-warmwind border-t border-gray-200 dark:border-gray-700">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center text-gray-400 dark:text-gray-500 text-sm mb-4 md:mb-0">
               <span>© 2025 Revlient. All rights reserved.</span>
@@ -205,7 +205,7 @@ const Footer = () => {
                 <span>Developed by</span>
                 <a 
                   href="https://www.linkedin.com/in/mukul-rajput-04114a225/" 
-                  target="_blank" 
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="ml-2 text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 font-semibold transition-colors duration-300"
                 >

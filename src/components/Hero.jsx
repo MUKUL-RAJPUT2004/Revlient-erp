@@ -215,11 +215,11 @@ const Hero = () => {
             <div className="text-center mb-12">
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <button className="warmwind-btn-primary inline-flex items-center px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-                  Start Free Trial
+                  Request a Demo
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </button>
-                <button className="warmwind-btn-secondary inline-flex items-center px-8 py-4 text-lg font-semibold rounded-xl">
-                  Watch Demo
+                <button className="warmwind-btn-secondary inline-flex items-center px-8 py-4 text-lg font-semibold rounded-xl" >
+                  <a href="#contact">Contact Sales</a>
                   <Play className="ml-2 w-5 h-5" />
                 </button>
               </div>

@@ -37,7 +37,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-warmwind transition-colors duration-300">
+    <div className="min-h-screen bg-warmwind transition-colors duration-300 flex flex-col">
       <Header />
       <main>
         <Hero />
