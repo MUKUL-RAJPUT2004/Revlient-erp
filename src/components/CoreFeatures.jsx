@@ -87,9 +87,9 @@ const CoreFeatures = () => {
         
         {/* Section Header */}
         <div className="text-center mb-16 scroll-reveal">
-          <h2 className="text-responsive-4xl font-bold text-warmwind mb-6">
+          <h3 className="text-responsive-4xl font-extrabold text-warmwind mb-6">
             Core Features
-          </h2>
+          </h3>
           <p className="text-responsive-lg text-warmwind-light max-w-3xl mx-auto leading-relaxed">
             Powerful features designed to streamline your education consultancy operations
           </p>

@@ -62,11 +62,11 @@ const FAQ = () => {
   }, []);
 
   return (
-    <section id="faq" className="py-16 lg:py-24 bg-white dark:bg-gray-900 transition-colors duration-300 relative overflow-hidden">
+    <section id="faq" className="py-16 lg:py-24 bg-warmwind duration-300 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16 scroll-reveal" style={{ animationDelay: '0s' }}>
-          <h2 className="text-[clamp(1.5rem,4vw,2rem)] sm:text-[clamp(2rem,5vw,3rem)] md:text-[clamp(2rem,6vw,4rem)] font-extrabold text-gray-800 dark:text-gray-200 mb-6">
+          <h2 className="text-responsive-4xl font-extrabold text-warmwind mb-6">
             Frequently Asked Questions
           </h2>
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
@@ -79,7 +79,7 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div
               key={faq.id}
-              className="bg-white dark:bg-gray-800 rounded-2xl border border-blue-600/20 dark:border-blue-700/20 overflow-hidden hover:shadow-lg transition-all duration-300 scroll-reveal"
+              className="bg-warmwind-card rounded-2xl border border-blue-600/20 dark:border-blue-700/20 overflow-hidden hover:shadow-lg transition-all duration-300 scroll-reveal"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Question Header */}
@@ -127,7 +127,7 @@ const FAQ = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-12 scroll-reveal" style={{ animationDelay: '0.6s' }}>
-          <div className="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 sm:p-8 border border-blue-300/30 dark:border-blue-700/30">
+          <div className="bg-gradient-to-r bg-warmwind-card rounded-2xl p-6 sm:p-8 border border-blue-300/30 dark:border-blue-700/30">
             <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-200 mb-4">
               Still have questions?
             </h3>

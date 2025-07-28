@@ -93,11 +93,11 @@ const Pricing = () => {
   }, []);
 
   return (
-    <section id="pricing" className="py-16 lg:py-24 bg-white dark:bg-gray-900 transition-colors duration-300 relative overflow-hidden">
+    <section id="pricing" className="py-16 lg:py-24 bg-warmwind duration-300 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16 scroll-reveal" style={{ animationDelay: '0s' }}>
-          <h2 className="text-[clamp(1.5rem,4vw,2rem)] sm:text-[clamp(2rem,5vw,3rem)] md:text-[clamp(2rem,6vw,4rem)] font-extrabold text-gray-800 dark:text-gray-200 mb-6">
+          <h2 className="text-responsive-4xl font-extrabold text-warmwind mb-6">
             Transparent Pricing
           </h2>
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
@@ -137,7 +137,7 @@ const Pricing = () => {
           {plans.map((plan, index) => (
             <div
               key={plan.name}
-              className={`relative bg-white dark:bg-gray-800 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 scroll-reveal border border-gray-200 dark:border-gray-700 overflow-hidden ${
+              className={`relative bg-warmwind-card rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 scroll-reveal border border-gray-200 dark:border-gray-700 overflow-hidden ${
                 plan.popular ? 'lg:-mt-12 ring-4 ring-blue-600/20 lg:scale-105' : ''
               }`}
               style={{ animationDelay: `${index * 0.2}s` }}

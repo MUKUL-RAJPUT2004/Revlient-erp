@@ -43,10 +43,10 @@ const CaseStudies = () => {
   }, []);
 
   return (
-    <section className="py-16 lg:py-24 bg-white dark:bg-gray-900 transition-colors duration-300 relative overflow-hidden">
+    <section className="py-16 lg:py-24 bg-warmwind transition-colors duration-300 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12 scroll-reveal" style={{ animationDelay: '0s' }}>
-          <h3 className="text-[clamp(1.5rem,4vw,2rem)] sm:text-[clamp(2rem,5vw,3rem)] md:text-[clamp(2rem,6vw,4rem)] font-extrabold text-gray-800 dark:text-gray-200 mb-4">
+          <h3 className="text-responsive-4xl font-extrabold text-warmwind mb-4">
             Success Stories
           </h3>
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
@@ -58,7 +58,7 @@ const CaseStudies = () => {
           {caseStudies.map((study, index) => (
             <div
               key={study.id}
-              className="bg-white dark:bg-gray-800 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 scroll-reveal border border-gray-200 dark:border-gray-700"
+              className="bg-warmwind-card rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 scroll-reveal border border-gray-200 dark:border-gray-700"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="relative h-48 overflow-hidden">

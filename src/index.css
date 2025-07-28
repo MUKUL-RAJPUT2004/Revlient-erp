@@ -31,8 +31,8 @@
 
 /* Dark Theme Colors */
 .dark {
-  --bg-primary: #0f172a;
-  --bg-secondary: #1e293b;
+  --bg-primary: #000000;
+  --bg-secondary: #111111;
   --bg-tertiary: #334155;
   --text-primary: #f8fafc;
   --text-secondary: #cbd5e1;
@@ -46,8 +46,8 @@
   --shadow-heavy: rgba(0, 0, 0, 0.4);
   
   /* Dark warmwind colors */
-  --warmwind-bg: #0f172a;
-  --warmwind-card: #1e293b;
+  --warmwind-bg: #000000;
+  --warmwind-card: #111111;
   --warmwind-text: #f8fafc;
   --warmwind-text-light: #cbd5e1;
   --warmwind-border: #334155;

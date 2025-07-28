@@ -88,12 +88,12 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         
         {/* Main Container with Warmwind-style Background */}
-        <div className="relative bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700 rounded-3xl overflow-hidden warmwind-shadow-xl">
-          
+        <div className="relative bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-100 dark:bg-warmwind-card rounded-3xl overflow-hidden warmwind-shadow-xl">
+
           {/* Warmwind-inspired Background Pattern */}
           <div className="absolute inset-0">
             {/* Subtle gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-blue-500/10 dark:from-slate-900/20 dark:to-slate-700/10"></div>
+            <div className="absolute inset-0 dark:bg-warmwind-card bg-gradient-to-br from-white/20 via-transparent to-black-800/10 "></div>
             
             {/* Floating elements for depth */}
             <div className="absolute top-20 left-10 w-32 h-32 bg-blue-200/20 dark:bg-blue-400/10 rounded-full blur-3xl"></div>
@@ -227,7 +227,7 @@ const Hero = () => {
 
             {/* Heading and Content */}
             <div className="text-center">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-warmwind mb-6 leading-tight">
+              <h1 className=" text-responsive-4xl font-extrabold text-warmwind mb-6 leading-tight">
                 Transform Your Education Consultancy
               </h1>
              

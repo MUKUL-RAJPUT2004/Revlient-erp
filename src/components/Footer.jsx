@@ -77,7 +77,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-200 transition-colors duration-300">
+    <footer className="bg-warmwind-card duration-300">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 scroll-reveal" style={{ animationDelay: '0s' }}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -204,7 +204,7 @@ const Footer = () => {
                 <Code className="w-4 h-4 mr-2 text-blue-600 dark:text-blue-400" />
                 <span>Developed by</span>
                 <a 
-                  href="" 
+                  href="https://www.linkedin.com/in/mukul-rajput-04114a225/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="ml-2 text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 font-semibold transition-colors duration-300"

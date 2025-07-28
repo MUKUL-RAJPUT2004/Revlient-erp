@@ -43,11 +43,11 @@ const WhyChooseUs = () => {
   }, []);
 
   return (
-    <section className="py-16 lg:py-24 bg-gray-50 dark:bg-gray-900 transition-colors duration-300 relative overflow-hidden">
+    <section className="py-16 lg:py-24 bg-warmwind transition-colors duration-300 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center mb-16 scroll-reveal" style={{ animationDelay: '0s' }}>
-          <h2 className="text-[clamp(1.5rem,4vw,2rem)] sm:text-[clamp(2rem,5vw,3rem)] md:text-[clamp(2rem,6vw,4rem)] font-extrabold text-gray-800 dark:text-gray-200">
+          <h2 className="text-responsive-4xl font-extrabold text-warmwind">
             Why Choose Us?
           </h2>
         </div>

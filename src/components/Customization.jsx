@@ -53,12 +53,12 @@ const architectureLayers = [
 ];
 
 const Customization = () => (
-  <section id="customization" className="py-16 lg:py-24 bg-white dark:bg-gray-900 transition-colors duration-300 relative overflow-hidden">
+  <section id="customization" className="py-16 lg:py-24  bg-warmwind transition-colors duration-300 relative overflow-hidden">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       {/* Section Header */}
       <div className="text-center mb-12 relative flex flex-col items-center scroll-reveal">
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-24 bg-blue-100 dark:bg-blue-900/30 rounded-full blur-2xl opacity-60 z-0" />
-        <h3 className="relative z-10 text-[clamp(2rem,5vw,3.5rem)] font-extrabold text-blue-600 dark:text-white drop-shadow mb-4">
+        <h3 className="relative z-10 text-responsive-4xl font-extrabold text-warmwind drop-shadow mb-4">
           Customizable Architecture
         </h3>
         <p className="relative z-10 text-lg sm:text-xl md:text-2xl text-gray-700 dark:text-gray-300 font-medium max-w-2xl mx-auto">
@@ -71,7 +71,7 @@ const Customization = () => (
         {features.map((feature, index) => (
           <div
             key={index}
-            className="group bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:bg-blue-50 dark:hover:bg-gray-700 scroll-reveal"
+            className="group warmwind-card hover:warmwind-shadow-lg transition-all duration-300 transform hover:-translate-y-1 scroll-reveal"
             style={{ animationDelay: `${index * 0.15}s` }}
           >
             <div className="flex items-center mb-4">
@@ -127,7 +127,7 @@ const Customization = () => (
       </div>
 
       {/* Call to Action */}
-      <div className="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 sm:p-8 border border-blue-300/30 dark:border-blue-700/30 mt-16 lg:mt-24 text-center shadow-lg relative overflow-hidden scroll-reveal" style={{ animationDelay: '0.5s' }}>
+      <div className="warmwind-card rounded-2xl p-6 sm:p-8 border border-blue-300/30 dark:border-blue-700/30 mt-16 lg:mt-24 text-center shadow-lg relative overflow-hidden scroll-reveal" style={{ animationDelay: '0.5s' }}>
         <div className="relative z-10">
           <Heart className="w-14 h-14 text-blue-600 dark:text-blue-400 hover:bg-blue-600 mx-auto mb-6 animate-pulse" />
           <h3 className="text-[clamp(1.5rem,3vw,2.5rem)] font-extrabold text-gray-900 dark:text-white mb-4 drop-shadow-lg">

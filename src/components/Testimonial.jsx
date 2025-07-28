@@ -83,11 +83,11 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section className="py-16 lg:py-24 bg-white dark:bg-gray-900 transition-colors duration-300 relative overflow-hidden">
+    <section className="py-16 lg:py-24 bg-warmwind transition-colors duration-300 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center mb-16 scroll-reveal" style={{ animationDelay: '0s' }}>
-          <h2 className="text-[clamp(1.5rem,4vw,2rem)] sm:text-[clamp(2rem,5vw,3rem)] md:text-[clamp(2rem,6vw,4rem)] font-extrabold text-gray-800 dark:text-gray-200">
+          <h2 className="text-responsive-4xl font-extrabold text-warmwind">
             Testimonials
           </h2>
         </div>
@@ -99,14 +99,14 @@ const Testimonials = () => {
             <div className="hidden lg:flex justify-start">
               <button
                 onClick={prevTestimonial}
-                className="w-12 h-12 bg-white/10 dark:bg-gray-800/50 hover:bg-blue-50 dark:hover:bg-gray-700/50 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-gray-200 dark:border-gray-700"
+                className="w-12 h-12 bg-warmwind-card rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-gray-200 dark:border-gray-700"
               >
                 <ChevronLeft className="w-6 h-6 text-gray-600 dark:text-gray-400" />
               </button>
             </div>
 
             {/* Current Testimonial */}
-            <div className="bg-white dark:bg-gray-800 rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+            <div className="bg-warmwind-card rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
               <div className="flex items-center mb-6">
                 <img
                   src={testimonials[currentTestimonial].image}
@@ -139,7 +139,7 @@ const Testimonials = () => {
             </div>
 
             {/* Next Testimonial Preview */}
-            <div className="bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm rounded-3xl p-6 sm:p-8 transition-all duration-300 hover:bg-blue-50 dark:hover:bg-gray-700/50 border border-gray-200 dark:border-gray-700">
+            <div className="bg-white/10 dark:bg-gray-900/50 backdrop-blur-sm rounded-3xl p-6 sm:p-8 transition-all duration-300 border border-gray-200 dark:border-gray-700">
               <div className="flex items-center mb-6">
                 <img
                   src={testimonials[(currentTestimonial + 1) % testimonials.length].image}

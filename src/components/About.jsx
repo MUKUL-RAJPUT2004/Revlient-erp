@@ -65,15 +65,15 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-16 lg:py-24 bg-warmwind-card transition-colors duration-300">
+    <section id="about" className="py-16 lg:py-24 bg-warmwind transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* What is Revlient ERP Section */}
         <div className="mb-20 scroll-reveal">
           <div className="text-center mb-12">
-            <h2 className="text-responsive-4xl font-bold text-warmwind mb-6">
+            <h3 className="text-responsive-4xl font-extrabold text-warmwind mb-6">
               What is Revlient ERP?
-            </h2>
+            </h3>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -110,7 +110,7 @@ const About = () => {
             </div>
 
             {/* Image - Right Side */}
-            <div className="scroll-reveal">
+            <div className="scroll-reveal  ">
               <div className="relative">
                 <img 
                   src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800" 
@@ -124,8 +124,8 @@ const About = () => {
         </div>
 
         {/* Four Stats Cards Section */}
-        <div className="mb-20 scroll-reveal">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mb-20 scroll-reveal ">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 " >
             {[
               { number: '500+', label: 'Education Consultancies', icon: Users },
               { number: '50K+', label: 'Students Managed', icon: Target },
@@ -134,7 +134,7 @@ const About = () => {
             ].map((stat, index) => (
               <div
                 key={stat.label}
-                className="warmwind-card text-center warmwind-shadow hover:warmwind-shadow-lg transition-all duration-300 transform hover:-translate-y-2"
+                className="warmwind-card hover:warmwind-shadow-lg text-center warmwind-shadow  transition-all duration-300 transform hover:-translate-y-2"
               >
                 <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="text-blue-600 dark:text-blue-400" size={24} />
@@ -195,45 +195,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* Core Features Preview Section */}
-        <div className="scroll-reveal">
-          <div className="text-center mb-12">
-            <h3 className="text-responsive-3xl font-bold text-warmwind mb-6">
-              Core Features
-            </h3>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {modules.map((module, index) => (
-              <div
-                key={module.title}
-                className="warmwind-card hover:warmwind-shadow-lg transition-all duration-300"
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <module.icon className="text-blue-600 dark:text-blue-400" size={24} />
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="text-responsive-lg font-semibold text-warmwind mb-2">
-                      {module.title}
-                    </h4>
-                    <p className="text-responsive-sm text-warmwind-light mb-3">
-                      {module.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {module.features.map((feature, idx) => (
-                        <span key={idx} className="text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-2 py-1 rounded-full">
-                          {feature}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
-      </div>
     </section>
   );
 };
