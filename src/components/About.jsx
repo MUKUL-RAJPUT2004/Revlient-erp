@@ -88,21 +88,21 @@ const About = () => {
                   <div className="flex items-start space-x-4">
                     <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 flex-shrink-0"></div>
                     <p className="text-responsive-base text-warmwind-light">
-                      <strong className="text-warmwind">Complete Business Management:</strong> Unlike generic CRM systems, Revlient ERP understands the unique challenges of education consultancies.
+                      <strong className="text-warmwind">Complete Business Management</strong> 
                     </p>
                   </div>
                   
                   <div className="flex items-start space-x-4">
                     <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 flex-shrink-0"></div>
                     <p className="text-responsive-base text-warmwind-light">
-                      <strong className="text-warmwind">Cloud-Based & Secure:</strong> Access your data anywhere, anytime with enterprise-grade security and regular backups.
+                      <strong className="text-warmwind">Cloud-Based & Secure</strong> 
                     </p>
                   </div>
                   
                   <div className="flex items-start space-x-4">
                     <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 flex-shrink-0"></div>
                     <p className="text-responsive-base text-warmwind-light">
-                      <strong className="text-warmwind">Industry-Specific:</strong> Tailored solutions for student management, application tracking, and business growth.
+                      <strong className="text-warmwind">Industry-Specific</strong> 
                     </p>
                   </div>
                 </div>
