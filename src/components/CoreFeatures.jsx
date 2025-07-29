@@ -132,7 +132,7 @@ const CoreFeatures = () => {
           
           {/* Video Placeholder */}
           <div className="relative max-w-4xl mx-auto">
-            <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 dark:from-slate-700 dark:to-slate-600 rounded-2xl flex items-center justify-center shadow-inner">
+            <div className="aspect-video bg-warmwind rounded-2xl flex items-center justify-center shadow-inner">
               <div className="text-center">
                 <div className="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-blue-600 transition-colors duration-300 cursor-pointer group shadow-lg">
                   <Video className="text-white group-hover:scale-110 transition-transform duration-300" size={32} />

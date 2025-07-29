@@ -88,7 +88,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         
         {/* Main Container with Warmwind-style Background */}
-        <div className="relative bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-100 dark:bg-warmwind-card rounded-3xl overflow-hidden warmwind-shadow-xl">
+        <div className="relative bg-warmwind-card rounded-3xl overflow-hidden warmwind-shadow-xl">
 
           {/* Warmwind-inspired Background Pattern */}
           <div className="absolute inset-0">
@@ -96,9 +96,9 @@ const Hero = () => {
             <div className="absolute inset-0 dark:bg-warmwind-card bg-gradient-to-br from-white/20 via-transparent to-black-800/10 "></div>
             
             {/* Floating elements for depth */}
-            <div className="absolute top-20 left-10 w-32 h-32 bg-blue-200/20 dark:bg-blue-400/10 rounded-full blur-3xl"></div>
-            <div className="absolute top-40 right-20 w-24 h-24 bg-indigo-200/20 dark:bg-indigo-400/10 rounded-full blur-2xl"></div>
-            <div className="absolute bottom-20 left-1/3 w-40 h-40 bg-purple-200/20 dark:bg-purple-400/10 rounded-full blur-3xl"></div>
+            <div className="absolute top-20 left-10 w-32 h-32 bg-warmwind-accent/10 rounded-full blur-3xl"></div>
+            <div className="absolute top-40 right-20 w-24 h-24 bg-warmwind-accent/20 rounded-full blur-2xl"></div>
+            <div className="absolute bottom-20 left-1/3 w-40 h-40 bg-warmwind-accent/10 rounded-full blur-3xl"></div>
           </div>
 
           <div className="relative z-10 px-8 py-16">
@@ -203,8 +203,8 @@ const Hero = () => {
                     key={index}
                     className={`h-2 rounded-full transition-all duration-500 ${
                       index === currentVideoIndex 
-                        ? 'w-8 bg-blue-500 shadow-lg' 
-                        : 'w-2 bg-gray-300 dark:bg-gray-600'
+                        ? 'w-8 bg-warmwind-accent shadow-lg' 
+                        : 'w-2 bg-warmwind-light'
                     }`}
                   />
                 ))}

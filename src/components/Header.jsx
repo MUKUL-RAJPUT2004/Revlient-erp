@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import { useTheme } from '../hooks/useTheme';
-import logo from '../asserts/logo.png';
+import blackLogo from '../asserts/logo-black.png';
+import whiteLogo from '../asserts/logo-white.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,8 +15,7 @@ const Header = () => {
     { name: 'Customization', href: '#customization' },
     { name: 'Pricing', href: '#pricing' },
     { name: 'FAQ', href: '#faq' },
-    { name: 'Contact', href: '#contact' },
-    
+    { name: 'Contact', href: '#contact' }
   ];
 
   return (
@@ -25,7 +25,7 @@ const Header = () => {
           {/* Logo */}
          <div className="flex-shrink-0">
           <div className="flex items-center">
-            <img src={logo} alt="Logo" width="32" height="32" className="mx-2" />
+            <img src={theme === 'dark' ? whiteLogo : blackLogo} alt="Logo" width="18" height="18" className="mx-2" />
             <span className="text-xl font-semibold text-warmwind">Revlient</span>
           </div>
         </div>

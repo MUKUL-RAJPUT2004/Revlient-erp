@@ -83,29 +83,26 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-xl">R</span>
-              </div>
-              <span className="ml-3 text-2xl font-bold">Revlient</span>
+            <div className="flex items-center">
+              <span className="text-xl font-semibold text-warmwind mb-6">Revlient</span>
             </div>
-            <p className="text-gray-400 dark:text-gray-500 mb-6 leading-relaxed text-sm sm:text-base">
+            <p className="text-warmwind-light mb-6 leading-relaxed text-sm sm:text-base">
               The complete ERP solution designed specifically for education consultancies. 
               Streamline operations and grow your business.
             </p>
 
             {/* Contact Info */}
             <div className="space-y-3 mb-6">
-              <div className="flex items-center text-gray-400 dark:text-gray-500">
-                <Mail className="w-5 h-5 mr-3 text-blue-600 dark:text-blue-400" />
+              <div className="flex items-center text-warmwind-light">
+                <Mail className="w-5 h-5 mr-3 text-warmwind-accent" />
                 <span>hello@revlient.com</span>
               </div>
-              <div className="flex items-center text-gray-400 dark:text-gray-500">
-                <Phone className="w-5 h-5 mr-3 text-blue-600 dark:text-blue-400" />
+              <div className="flex items-center text-warmwind-light">
+                <Phone className="w-5 h-5 mr-3 text-warmwind-accent" />
                 <span>+1 (555) 123-4567</span>
               </div>
-              <div className="flex items-center text-gray-400 dark:text-gray-500">
-                <MapPin className="w-5 h-5 mr-3 text-blue-600 dark:text-blue-400" />
+              <div className="flex items-center text-warmwind-light">
+                <MapPin className="w-5 h-5 mr-3 text-warmwind-accent" />
                 <span>San Francisco, CA</span>
               </div>
             </div>
@@ -118,7 +115,7 @@ const Footer = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 dark:text-gray-500 ${social.color} hover:text-white transition-all duration-300 hover:scale-110`}
+                  className={`w-10 h-10 bg-warmwind-card border border-warmwind rounded-lg flex items-center justify-center text-warmwind-light ${social.color} hover:text-white transition-all duration-300 hover:scale-110`}
                 >
                   <social.icon size={18} />
                 </a>
@@ -134,7 +131,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-gray-400 dark:text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 flex items-center group"
+                    className="text-warmwind-light hover:text-warmwind-accent transition-colors duration-300 flex items-center group"
                   >
                     <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
                     <span className="group-hover:translate-x-1 transition-transform duration-300">
@@ -154,7 +151,7 @@ const Footer = () => {
                 <li key={solution.name}>
                   <a
                     href={solution.href}
-                    className="text-gray-400 dark:text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 flex items-center group"
+                    className="text-warmwind-light hover:text-warmwind-accent transition-colors duration-300 flex items-center group"
                   >
                     <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
                     <span className="group-hover:translate-x-1 transition-transform duration-300">
@@ -169,16 +166,16 @@ const Footer = () => {
           {/* Newsletter */}
           <div>
             <h3 className="text-lg font-semibold mb-6">Stay Updated</h3>
-            <p className="text-gray-400 dark:text-gray-500 mb-4 text-sm sm:text-base">
+            <p className="text-warmwind-light mb-4 text-sm sm:text-base">
               Get the latest updates and insights delivered to your inbox.
             </p>
             <div className="space-y-3">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full px-4 py-2 sm:py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-gray-200 placeholder-gray-400 focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-300"
+                className="w-full px-4 py-2 sm:py-3 bg-warmwind-card border border-warmwind rounded-lg text-warmwind placeholder-warmwind-light focus:ring-2 focus:ring-warmwind-accent focus:border-transparent transition-all duration-300"
               />
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 sm:py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
+              <button className="w-full bg-warmwind-accent hover:bg-opacity-80 text-white px-4 py-2 sm:py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
                 Subscribe
               </button>
             </div>
@@ -187,10 +184,10 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-warmwind border-t border-gray-200 dark:border-gray-700">
+      <div className="bg-warmwind border-t border-warmwind">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="flex items-center text-gray-400 dark:text-gray-500 text-sm mb-4 md:mb-0">
+            <div className="flex items-center text-warmwind-light text-sm mb-4 md:mb-0">
               <span>© 2025 Revlient. All rights reserved.</span>
               <span className="mx-2">•</span>
               <span className="flex items-center">
@@ -200,14 +197,14 @@ const Footer = () => {
 
             {/* Developer Credits */}
             <div className="flex items-center space-x-4">
-              <div className="flex items-center text-gray-400 dark:text-gray-500 text-sm">
-                <Code className="w-4 h-4 mr-2 text-blue-600 dark:text-blue-400" />
+              <div className="flex items-center text-warmwind-light text-sm">
+                <Code className="w-4 h-4 mr-2 text-warmwind-accent" />
                 <span>Developed by</span>
                 <a 
                   href="https://www.linkedin.com/in/mukul-rajput-04114a225/" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="ml-2 text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 font-semibold transition-colors duration-300"
+                  className="ml-2 text-warmwind-accent hover:text-warmwind font-semibold transition-colors duration-300 hover:underline text-blue-600"
                 >
                   MUKUL RAJPUT
                 </a>

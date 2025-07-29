@@ -49,7 +49,7 @@ const CaseStudies = () => {
           <h3 className="text-responsive-4xl font-extrabold text-warmwind mb-4">
             Success Stories
           </h3>
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-warmwind-light max-w-2xl mx-auto">
             Real results from consultancies that transformed their operations with our ERP
           </p>
         </div>
@@ -58,7 +58,7 @@ const CaseStudies = () => {
           {caseStudies.map((study, index) => (
             <div
               key={study.id}
-              className="bg-warmwind-card rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 scroll-reveal border border-gray-200 dark:border-gray-700"
+              className="bg-warmwind-card rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 scroll-reveal border border-warmwind"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="relative h-48 overflow-hidden">
@@ -80,26 +80,26 @@ const CaseStudies = () => {
 
               <div className="p-6">
                 <div className="mb-4">
-                  <h5 className="font-semibold text-gray-800 dark:text-gray-200 mb-2 text-base sm:text-lg">Challenge:</h5>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">
+                  <h5 className="font-semibold text-warmwind mb-2 text-base sm:text-lg">Challenge:</h5>
+                  <p className="text-warmwind-light text-sm sm:text-base">
                     {study.challenge}
                   </p>
                 </div>
 
                 <div className="mb-4">
-                  <h5 className="font-semibold text-gray-800 dark:text-gray-200 mb-2 text-base sm:text-lg">Solution:</h5>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">
+                  <h5 className="font-semibold text-warmwind mb-2 text-base sm:text-lg">Solution:</h5>
+                  <p className="text-warmwind-light text-sm sm:text-base">
                     {study.solution}
                   </p>
                 </div>
 
                 <div>
-                  <h5 className="font-semibold text-gray-800 dark:text-gray-200 mb-3 text-base sm:text-lg">Results:</h5>
+                  <h5 className="font-semibold text-warmwind mb-3 text-base sm:text-lg">Results:</h5>
                   <div className="space-y-2">
                     {study.results.map((result, idx) => (
                       <div key={idx} className="flex items-center">
                         <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                        <span className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">
+                        <span className="text-warmwind-light text-sm sm:text-base">
                           {result}
                         </span>
                       </div>

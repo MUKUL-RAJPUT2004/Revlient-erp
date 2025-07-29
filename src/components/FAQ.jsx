@@ -69,7 +69,7 @@ const FAQ = () => {
           <h2 className="text-responsive-4xl font-extrabold text-warmwind mb-6">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-warmwind-light max-w-2xl mx-auto leading-relaxed">
             Get answers to common questions about Revlient ERP and how it can transform your education consultancy
           </p>
         </div>
@@ -94,7 +94,7 @@ const FAQ = () => {
                   </div>
 
                   {/* Question */}
-                  <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-gray-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                  <h3 className="text-lg sm:text-xl font-semibold text-warmwind group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                     {faq.question}
                   </h3>
                 </div>
@@ -102,9 +102,9 @@ const FAQ = () => {
                 {/* Chevron */}
                 <div className="ml-4 flex-shrink-0">
                   {openFAQ === faq.id ? (
-                    <ChevronUp className="w-5 h-5 sm:w-6 sm:h-6 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-all duration-300" />
+                    <ChevronUp className="w-5 h-5 sm:w-6 sm:h-6 text-warmwind-light group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-all duration-300" />
                   ) : (
-                    <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-all duration-300" />
+                    <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6 text-warmwind-light group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-all duration-300" />
                   )}
                 </div>
               </button>
@@ -115,7 +115,7 @@ const FAQ = () => {
               }`}>
                 <div className="px-6 pb-4 sm:pb-6">
                   <div className="pl-14 sm:pl-16">
-                    <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                    <p className="text-base sm:text-lg text-warmwind-light leading-relaxed">
                       {faq.answer}
                     </p>
                   </div>
@@ -128,17 +128,17 @@ const FAQ = () => {
         {/* Bottom CTA */}
         <div className="text-center mt-12 scroll-reveal" style={{ animationDelay: '0.6s' }}>
           <div className="bg-gradient-to-r bg-warmwind-card rounded-2xl p-6 sm:p-8 border border-blue-300/30 dark:border-blue-700/30">
-            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-200 mb-4">
+            <h3 className="text-xl sm:text-2xl font-bold text-warmwind mb-4">
               Still have questions?
             </h3>
-            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-warmwind-light mb-6 max-w-2xl mx-auto">
               Our team is here to help you understand how Revlient ERP can transform your education consultancy operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="#contact" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 sm:px-8 sm:py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center">
                 Contact Support
               </a>
-              <button className="bg-white dark:bg-gray-800 border border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white px-6 py-2 sm:px-8 sm:py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105">
+              <button className="bg-warmwind-card border border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white px-6 py-2 sm:px-8 sm:py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105">
                 Schedule a Demo
               </button>
             </div>
