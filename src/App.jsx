@@ -11,6 +11,7 @@ import Customization from './components/Customization';
 import CaseStudy from './components/CaseStudy';
 import WhyChooseUs from './components/WhyChooseUs';
 import Testimonials from './components/Testimonial';
+import WhatsAppFloat from './components/WhatsAppFloat';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-warmwind transition-colors duration-300 flex flex-col">
+      <WhatsAppFloat />
       <Header />
       <main>
         <Hero />

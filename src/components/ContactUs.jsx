@@ -70,20 +70,20 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'hello@revlient.com',
-      link: 'mailto:hello@revlient.com'
+      value: 'connect@revlient.com',
+      link: 'mailto:connect@revlient.com'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      value: '+916238714197',
+      link: 'tel:+916238714197'
     },
     {
       icon: MessageSquare,
       label: 'WhatsApp',
-      value: '+1 (555) 123-4567',
-      link: 'https://wa.me/15551234567'
+      value: '+916238714197',
+      link: 'https://wa.me/918943714197'
     }
   ];
 
@@ -91,7 +91,7 @@ const Contact = () => {
     {
       icon: Linkedin,
       name: 'LinkedIn',
-      url: '',
+      url: 'https://www.linkedin.com/in/devjithanoop/',
       color: 'hover:text-blue-600'
     },
     {
@@ -143,7 +143,7 @@ const Contact = () => {
             Contact Us
           </h2>
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Ready to transform your education consultancy? Get in touch with our team for a personalized demo and consultation.
+            Ready to transform your business? Get in touch with our team for a personalized demo and consultation.
           </p>
         </div>
 
@@ -339,13 +339,14 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                      Office Location
+                      Business Address:
+
                     </p>
                     <p className="text-base sm:text-lg font-semibold text-gray-900 dark:text-gray-200">
-                      Kochi, India
+                      Chakkaraparamb
                     </p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
-                      123 Business District, Suite XYZ
+                      Vytilla, Kochi, Kerala
                     </p>
                   </div>
                 </div>

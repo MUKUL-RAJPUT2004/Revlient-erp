@@ -9,7 +9,11 @@ import {
   Video,
   Shield,
   Globe,
-  Zap
+  Zap,
+  PhoneCallIcon,
+  PuzzleIcon,
+  GitBranchIcon,
+  SearchSlash
 } from 'lucide-react';
 
 const CoreFeatures = () => {
@@ -36,48 +40,33 @@ const CoreFeatures = () => {
   const features = [
     {
       icon: Users,
-      title: 'Student Management',
-      description: 'Complete student profiles with application tracking and communication history.'
+      title: 'Staff Management',
+      description: 'Attendance, payroll, and productivity in one place.'
     },
     {
-      icon: Calendar,
-      title: 'Smart Scheduling',
-      description: 'Automated appointment system with calendar integration and reminders.'
+      icon: PhoneCallIcon,
+      title: 'Call Recording',
+      description: 'Secure cloud-based call monitoring with logs.'
     },
     {
-      icon: FileText,
-      title: 'Document Hub',
-      description: 'Secure document storage with automated verification workflows.'
-    },
-    {
-      icon: DollarSign,
-      title: 'Financial Tracking',
-      description: 'Invoice generation, payment tracking, and financial reporting.'
+      icon: SearchSlash,
+      title: 'Lead Management',
+      description: 'Capture, assign, and track leads effectively.'
     },
     {
       icon: BarChart3,
       title: 'Analytics Dashboard',
-      description: 'Real-time insights with customizable reports and metrics.'
+      description: 'Real-time reports and KPIs.'
     },
     {
-      icon: MessageSquare,
-      title: 'Communication Center',
-      description: 'Integrated email, SMS, and notification management system.'
+      icon: GitBranchIcon,
+      title: 'Multi-Branch Access',
+      description: 'Control multiple branches seamlessly.'
     },
     {
-      icon: Shield,
-      title: 'Data Security',
-      description: 'Enterprise-grade security with encrypted data storage.'
-    },
-    {
-      icon: Globe,
-      title: 'Multi-Location',
-      description: 'Manage multiple offices and locations from single dashboard.'
-    },
-    {
-      icon: Zap,
-      title: 'Automation',
-      description: 'Automated workflows to reduce manual tasks and errors.'
+      icon: PuzzleIcon,
+      title: 'Customization',
+      description: 'Tailor workflows and permissions as per business needs.'
     }
   ];
 
@@ -91,7 +80,7 @@ const CoreFeatures = () => {
             Core Features
           </h3>
           <p className="text-responsive-lg text-warmwind-light max-w-3xl mx-auto leading-relaxed">
-            Powerful features designed to streamline your education consultancy operations
+            Powerful features designed to streamline your business operations
           </p>
         </div>
 

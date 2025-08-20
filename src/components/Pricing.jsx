@@ -6,8 +6,8 @@ const Pricing = () => {
 
   const plans = [
     {
-      name: 'Starter',
-      description: 'Get started with all the essentials for small consultancies.',
+      name: 'Starter Plan',
+      description: 'Basic features, limited users - Perfect for small businesses getting started.',
       icon: Users,
       color: 'from-blue-100 to-blue-600',
       popular: false,
@@ -16,19 +16,20 @@ const Pricing = () => {
         yearly: 39
       },
       features: [
-        'Up to 100 students',
-        'Basic student management',
-        'Document storage (5GB)',
-        'Email notifications',
+        'Up to 10 users',
+        'Basic staff management',
+        'Lead tracking',
+        'Call recording (100 hours/month)',
         'Basic reporting',
+        'Email support',
         'Mobile app access',
-        'Email support'
+        'Cloud storage (5GB)'
       ],
       cta: 'Start with Starter'
     },
     {
-      name: 'Professional',
-      description: 'Our most popular plan—perfect for growing teams who want more power and flexibility.',
+      name: 'Professional Plan',
+      description: 'Advanced modules, more users - Our most popular plan for growing businesses.',
       icon: Building2,
       color: 'from-blue-600 to-blue-700',
       popular: true,
@@ -37,20 +38,22 @@ const Pricing = () => {
         yearly: 79
       },
       features: [
-        'Up to 500 students',
-        'Advanced student management',
-        'Document storage (50GB)',
-        'WhatsApp & SMS integration',
-        'Advanced reporting',
-        'Custom workflows',
+        'Up to 50 users',
+        'Advanced staff management',
+        'Full CRM & lead management',
+        'Unlimited call recording',
+        'Advanced analytics dashboard',
+        'Multi-branch access',
         'Priority support',
-        'Calendar integration'
+        'Cloud storage (50GB)',
+        'Custom workflows',
+        'WhatsApp & SMS integration'
       ],
       cta: 'Go Professional'
     },
     {
-      name: 'Enterprise',
-      description: 'For large organizations—unlimited features, storage, and support. Let\'s build your custom solution together.',
+      name: 'Enterprise Plan',
+      description: 'Fully customized ERP for large organizations - Unlimited everything with dedicated support.',
       icon: Rocket,
       color: 'from-blue-700 to-blue-800',
       popular: false,
@@ -59,16 +62,20 @@ const Pricing = () => {
         yearly: 'Custom'
       },
       features: [
-        'Unlimited students',
+        'Unlimited users',
         'Complete ERP suite',
-        'Unlimited storage',
-        'All integrations',
-        'Advanced analytics',
-        'Custom development',
-        'Dedicated support',
-        'White-label solution'
+        'Custom automation workflows',
+        'Unlimited call recording & storage',
+        'Advanced analytics & reporting',
+        'Multi-branch & multi-company',
+        'Dedicated account manager',
+        'Unlimited cloud storage',
+        'Custom integrations',
+        'White-label solution',
+        'On-premise deployment option',
+        '24/7 priority support'
       ],
-      cta: 'Contact Us for Enterprise'
+      cta: 'Request a Quote'
     }
   ];
 
@@ -101,7 +108,7 @@ const Pricing = () => {
             Transparent Pricing
           </h2>
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
-            Choose the perfect plan for your consultancy. All plans include core features with no hidden fees.
+            Choose the perfect plan for your business. All plans include core features with no hidden fees.
           </p>
 
           {/* Billing Toggle */}
@@ -209,7 +216,7 @@ const Pricing = () => {
                 </div>
 
                 {/* CTA Button */}
-                {plan.cta === 'Contact Us for Enterprise' ? (
+                {plan.cta === 'Request a Quote' ? (
                   <a
                     href="#contact"
                     className="w-full py-3 px-6 rounded-xl font-semibold text-base sm:text-lg transition-all duration-300 flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl"

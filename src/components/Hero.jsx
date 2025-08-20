@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Play, Pause, Volume2, VolumeX } from 'lucide-react';
+import { ArrowRight, Play, Pause, Volume2, VolumeX, Users, Phone, BarChart3 } from 'lucide-react';
+import { SearchSlash } from 'lucide-react';
 
 const Hero = () => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
@@ -211,34 +212,42 @@ const Hero = () => {
               </div>
             </div>
 
+            {/* Key Highlights / Features Preview */}
+           
+
             {/* CTA Buttons */}
             <div className="text-center mb-12">
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <button className="warmwind-btn-primary inline-flex items-center px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-                  Request a Demo
+                  <a href="#features">Get Started</a>
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </button>
-                <button className="warmwind-btn-secondary inline-flex items-center px-8 py-4 text-lg font-semibold rounded-xl" >
-                  <a href="#contact">Contact Sales</a>
+                <a 
+                  href="https://calendly.com/your-calendly-link" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="warmwind-btn-secondary inline-flex items-center px-8 py-4 text-lg font-semibold rounded-xl"
+                >
+                  Book a Demo
                   <Play className="ml-2 w-5 h-5" />
-                </button>
+                </a>
               </div>
             </div>
 
             {/* Heading and Content */}
             <div className="text-center">
               <h1 className=" text-responsive-4xl font-extrabold text-warmwind mb-6 leading-tight">
-                Transform Your Education Consultancy
+                REVMENT – The Smarter Way to Manage Your Business
               </h1>
              
               <p className="text-lg sm:text-xl text-warmwind-light max-w-4xl mx-auto leading-relaxed">
-                The complete ERP solution designed specifically for education consultancies. 
-                Streamline operations, boost productivity, and grow your business with intelligent automation.
+                From staff to sales, REVMENT brings everything under one easy-to-use ERP platform.
               </p>
             </div>
           </div>
         </div>
       </div>
+      
     </section>
   );
 };

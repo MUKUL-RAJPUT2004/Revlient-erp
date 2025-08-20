@@ -5,12 +5,12 @@ const WhyChooseUs = () => {
   const [activeImage, setActiveImage] = useState(0);
 
   const advantages = [
-    'Built specifically for consultancies',
-    'Quick deployment (2–5 days)',
-    'Dedicated support team',
-    'Affordable pricing with no hidden costs',
-    'Customizable workflows and modules',
-    'Enterprise-grade security'
+    'We provide any type of automation your business requires.',
+    'Seamless integration with your existing ERP or third-party tools.',
+    'Intuitive and easy-to-use interface.',
+    'Scalable for small to large businesses.',
+    'Dedicated support team to ensure smooth operations.',
+    
   ];
 
   const images = [

@@ -23,17 +23,17 @@ const Footer = () => {
   ];
 
   const solutions = [
-    { name: 'Student Management', href: '#features' },
-    { name: 'Document Processing', href: '#features' },
-    { name: 'Financial Tracking', href: '#features' },
-    { name: 'Smart Scheduling', href: '#features' }
+    { name: 'Staff Management', href: '#features' },
+    { name: 'Lead Management ', href: '#features' },
+    { name: 'Call Recording', href: '#features' },
+    { name: 'Analytics Dashboard', href: '#features' }
   ];
 
   const socialLinks = [
     {
       icon: Linkedin,
       name: 'LinkedIn',
-      url: '',
+      url: 'https://www.linkedin.com/in/devjithanoop/',
       color: 'hover:bg-blue-600'
     },
     {
@@ -84,26 +84,25 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center">
-              <span className="text-xl font-semibold text-warmwind mb-6">Revlient</span>
+              <span className="text-xl font-semibold text-warmwind mb-6">REVMENT</span>
             </div>
             <p className="text-warmwind-light mb-6 leading-relaxed text-sm sm:text-base">
-              The complete ERP solution designed specifically for education consultancies. 
-              Streamline operations and grow your business.
+              Our mission is to automate all the processes that businesses rely on, enabling teams to save time, cut costs, and focus on growth.
             </p>
 
             {/* Contact Info */}
             <div className="space-y-3 mb-6">
               <div className="flex items-center text-warmwind-light">
                 <Mail className="w-5 h-5 mr-3 text-warmwind-accent" />
-                <span>hello@revlient.com</span>
+                <span>connect@revlient.com</span>
               </div>
               <div className="flex items-center text-warmwind-light">
                 <Phone className="w-5 h-5 mr-3 text-warmwind-accent" />
-                <span>+1 (555) 123-4567</span>
+                <span>+916238714197</span>
               </div>
               <div className="flex items-center text-warmwind-light">
                 <MapPin className="w-5 h-5 mr-3 text-warmwind-accent" />
-                <span>San Francisco, CA</span>
+                <span>Chakkaraparamb, Vytilla, Kochi, Kerala</span>
               </div>
             </div>
 
@@ -167,18 +166,9 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Stay Updated</h3>
             <p className="text-warmwind-light mb-4 text-sm sm:text-base">
-              Get the latest updates and insights delivered to your inbox.
+              Follow Us!
             </p>
-            <div className="space-y-3">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full px-4 py-2 sm:py-3 bg-warmwind-card border border-warmwind rounded-lg text-warmwind placeholder-warmwind-light focus:ring-2 focus:ring-warmwind-accent focus:border-transparent transition-all duration-300"
-              />
-              <button className="w-full bg-warmwind-accent hover:bg-opacity-80 text-white px-4 py-2 sm:py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
-                Subscribe
-              </button>
-            </div>
+           
           </div>
         </div>
       </div>
@@ -188,11 +178,9 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center text-warmwind-light text-sm mb-4 md:mb-0">
-              <span>© 2025 Revlient. All rights reserved.</span>
-              <span className="mx-2">•</span>
-              <span className="flex items-center">
-                Made with <Heart className="w-4 h-4 mx-1 text-red-500" fill="currentColor" /> for education consultancies
-              </span>
+              <span>Copyright © Revlient Intercontinental LLP</span>
+             
+              
             </div>
 
             {/* Developer Credits */}
